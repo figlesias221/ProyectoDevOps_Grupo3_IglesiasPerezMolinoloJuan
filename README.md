@@ -2,6 +2,8 @@
 
 Integrantes: Marcelo Pérez -227362-, Federico Iglesias -244831-, Andrés Juan -241600-, Matías Molinolo -231323-.
 
+Letra del obligatorio: https://fi365.sharepoint.com/:w:/s/IngSoft_ISA2/EYTQH9GaZQlGoOZ21O9BRJEBAk3wSQY6UeoB2SvIKk4c2g?e=6TDPhl
+
 ## Proceso de Ingeniería
 
 A continuación, la definición de los distintos aspectos de nuestro proceso de ingeniería:
