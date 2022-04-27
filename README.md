@@ -42,7 +42,7 @@ Para mantener un registro ***por día*** de las horas dedicadas por cada integra
 
 Para medir el esfuerzo en HS-P de cada issue o user story, cada persona deberá marcar y actualizar la medida de esfuerzo dedicada (en HS-P) en cada una de sus issues o user stories en el tablero. Además, en futuras iteraciones se estimará también el esfuerzo de cada una de ellas, para luego comparar los dos valores y en base a ello adaptar el proceso. Ejemplo:
 
-<img src="/imagenes/ejemplo_card_esfuerzo.png" style="height: 20%;" />
+<img src="/imagenes/ejemplo_card_esfuerzo.png" style="height: 250px" />
 
 
 Para la adaptación del proceso utilizaremos las siguientes métricas: lead time, cycle time, deployment frequency, WIP. Para su recopilación y generación utilizaremos el log de movimientos que que genera github cada vez que una issue es se mueve de columna en columna.
