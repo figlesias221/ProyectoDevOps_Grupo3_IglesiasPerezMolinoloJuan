@@ -6,13 +6,24 @@ Letra del obligatorio: https://fi365.sharepoint.com/:w:/s/IngSoft_ISA2/EYTQH9GaZ
 
 ## Proceso de Ingeniería
 
-A continuación, la definición de los distintos aspectos de nuestro proceso de ingeniería:
+A nivel de ingeniería, utilizaremos BDD como framework para desarrollo y mantenimiento. El output de BDD van a ser nuestras user stories, que luego serán sometidas a toda la pipeline definida a continuación (en este orden):
+- **Requirements definition**: definición de las user stories en el formato COMO tipo de usuario QUIERO funcionalidad PARA beneficio.
+- **Test cases implementation**: definición de criterios de aceptación (escenarios) en el formato DADO contexto CUANDO evento ENTONCES resultados.
+- **Application implementation**: desarrollo de la aplicación que llevan a cabo los desarrolladores.
+- **Automatic unit testing**: implementar testing unitario que corre de forma automática.
+- **Refactoring**: luchar contra la deuda técnica identificando posibilidades de mejora en términos de eficiencia, estilos del código o errores de diseño.
+- **Build**: hacer un *build* de la aplicación.
+- **Automatic integration testing**: implementar testing automático para testear la interacción entre los distintos módulos de software.
+- **Deploy to staging**: desplegar el sistema en *staging*, reconociendo potenciales fallos, sin afectar usuarios finales.
+- **Acceptance tests**: determinar si los requerimientos fueron satisfechos.
+- **Deploy to production**: desplegar el sistema a producción, entregando valor al usuario final.
+
 
 ### Marco de gestión ágil
 
 Se utilizará Kanban para el proyecto como marco de gestión ágil con iteraciones de duración de dos semanas. 
 
-Se celebrarán las ceremonias de retrospectiva -los viernes previos a la finalización de cada iteración- y daily stand ups -los martes y jueves de cada semana-. Asimismo, el board de Kanban guiará el trabajo del equipo.
+Se celebrarán las ceremonias de retrospectiva -los viernes previos a la finalización de cada iteración- y daily stand ups -los miércoles a las 11 am y viernes a las 4 pm de cada semana-. Asimismo, el board de Kanban guiará el trabajo del equipo.
 
 ### Estrategias de branching
 
@@ -27,19 +38,25 @@ Al final de cada iteración, se mergeará _develop_ a _main_ y se creará un nue
 
 ### Gestión del proceso
 
-Para mantener un registro diario de las horas dedicadas por cada integrante del equipo utilizaremos una _timesheet_ que mantendremos en un documento compartido entre todos. De esta forma tendremos métricas del tiempo dedicado cada día, que luego podrán ser complementadas con otras métricas como medio de feedback para adaptar el proceso. 
+Para mantener un registro ***por día*** de las horas dedicadas por cada integrante del equipo utilizaremos una _timesheet_ que mantendremos en un documento compartido entre todos. De esta forma tendremos métricas del tiempo dedicado cada día, que luego podrán ser complementadas con otras métricas como medio de feedback para adaptar el proceso. 
 
-<!-- TODO: Definir generación y recopilación de métricas para la adaptación del proceso: lead time, cycle time, deployment frequency, WIP -->
+Para medir el esfuerzo en HS-P de cada issue o user story, cada persona deberá marcar y actualizar la medida de esfuerzo dedicada (en HS-P) en cada una de sus issues o user stories en el tablero. Además, en futuras iteraciones se estimará también el esfuerzo de cada una de ellas, para luego comparar los dos valores y en base a ello adaptar el proceso. Ejemplo:
 
-### Configuración del tablero Kanban
+<img src="/imagenes/ejemplo_card_esfuerzo.png" style="height: 40%;" />
+
+
+Para la adaptación del proceso utilizaremos las siguientes métricas: lead time, cycle time, deployment frequency, WIP. Para su recopilación y generación utilizaremos el log de movimientos que que genera github cada vez que una issue es se mueve de columna en columna.
+
+### Configuración inicial del tablero Kanban
 
 Se utilizará el tablero que ofrece GitHub en la sección de Proyectos. El tablero nos permitirá limitar el Work In Progress y maximizar el Flow.
 
-Definimos las siguientes columnas:
+Definimos las siguientes columnas, considerando que en esta etapa del proyecto no tenemos historias de usuario que puedan ser sometidas a toda la pipeline descrita anteriormente, sin perjuicio de que en el futuro el tablero cambie:
 - Backlog
 - In Progress
-- Blocked (?)
+- Blocked
 - QA
 - Done
 
-Designamos a Andrés como el responsable de la creación de las issues (tarjetas) en el tablero. Las issues deben ser explicativas, fáciles de entender y a su vez, deben tener asociados un conjunto de criterios de aceptación que clarifiquen el alcance de la issue (lo que se pretende hacer). Si bien Andrés será el encargado de la creación de las tarjetas, luego de creadas estas se discutirán y aclararán entre todos en la próxima ceremonia de daily stand up.
+
+Designamos a Andrés como el responsable de la creación de las issues (tarjetas) en el tablero. Las issues deben ser explicativas, fáciles de entender y a su vez. Si bien Andrés será el encargado de la creación de las tarjetas, luego de creadas estas se discutirán y aclararán entre todos en la próxima ceremonia de daily stand up.
