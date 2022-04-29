@@ -22,8 +22,6 @@ Otro principio de CC, es que si se va a eliminar codigo, que se borre directamen
 
 <img src="../Imagenes/comentarios2.png" alt="drawing" style="width:400px;"/>
 
----
-
 <img src="../Imagenes/comentarios3.png" alt="drawing" style="width:400px;"/>
 
 ---
@@ -32,11 +30,7 @@ Utilizacion de nombres redundantes para metodos, no hay necesidad de especificar
 
 <img src="../Imagenes/nombres1.png" alt="drawing" style="width:500px;"/>
 
----
-
 <img src="../Imagenes/nombres2.png" alt="drawing" style="width:500px;"/>
-
----
 
 <img src="../Imagenes/nombres3.png" alt="drawing" style="width:500px;"/>
 
@@ -46,25 +40,19 @@ Una buena practica seria importar todos los strings que son utlizados cómo cons
 
 <img src="../Imagenes/strings1.png" alt="drawing" style="width:500px;"/>
 
----
-
 <img src="../Imagenes/strings2.png" alt="drawing" style="width:500px;"/>
 
----
-
 <img src="../Imagenes/strings3.png" alt="drawing" style="width:250px;"/>
-
----
 
 <img src="../Imagenes/strings5.png" alt="drawing" style="width:500px;"/>
 
 En este metodo, los 3 bloques else if pueden ser suplantados por un unico bloque con un || entre las 3 condiciones, ya que, en los 3 se ejecuta el mismo codigo.
 
----
-
 <img src="../Imagenes/ifElse.png" alt="drawing" style="width:450px;"/>
 
 `else if (error.status === 400 || error.status === 409 || error.status === 500){ alert(error.error); handled = true; }`
+
+---
 
 Existen dependencias que no se utilizan, una buena practica seria eliminar todas las dependencias innecesarias
 
@@ -74,11 +62,15 @@ Existen dependencias que no se utilizan, una buena practica seria eliminar todas
 
 Extraer `this.resortSearchModel.acommodationDetails` para no tener que repetirlo tantas veces.
 
-## <img src="../Imagenes/extract.png" alt="drawing" style="width:450px;"/>
+<img src="../Imagenes/extract.png" alt="drawing" style="width:450px;"/>
+
+---
 
 Utilizar nombres descriptivos, en este caso puede no quedar claro lo que es `p`
 
 <img src="../Imagenes/unused.png" alt="drawing" style="width:450px;"/>
+
+---
 
 ## Mejoras
 
@@ -90,8 +82,6 @@ El codigo queda fuera de la pantalla horizontalmente y se hace tedioso de leer y
 
 <img src="../Imagenes/prettier1.png" alt="drawing" style="width:450px;"/>
 
----
-
 <img src="../Imagenes/prettier2.png" alt="drawing" style="width:450px;"/>
 
 ---
@@ -99,8 +89,6 @@ El codigo queda fuera de la pantalla horizontalmente y se hace tedioso de leer y
 **Con Prettier:**
 
 <img src="../Imagenes/prettier3.png" alt="drawing" style="width:450px;"/>
-
----
 
 <img src="../Imagenes/prettier4.png" alt="drawing" style="width:450px;"/>
 
@@ -115,8 +103,6 @@ Otro aspecto de mejora podria ser separar imports externos/internos con un salto
 Eliminar response que no se utilizan para reducir complejidad.
 
 <img src="../Imagenes/unused.png" alt="drawing" style="width:450px;"/>
-
----
 
 <img src="../Imagenes/unused2.png" alt="drawing" style="width:450px;"/>
 
