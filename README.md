@@ -38,9 +38,7 @@ Al final de cada iteración, se mergeará _develop_ a _main_ y se creará un nue
 
 ### Gestión del proceso
 
-Para mantener un registro ***por día*** de las horas dedicadas por cada integrante del equipo utilizaremos una _timesheet_ que mantendremos en un documento compartido entre todos. De esta forma tendremos métricas del tiempo dedicado cada día, que luego podrán ser complementadas con otras métricas como medio de feedback para adaptar el proceso. 
-
-Para medir el esfuerzo en HS-P de cada issue o user story, cada persona deberá marcar y actualizar la medida de esfuerzo dedicada (en HS-P) en cada una de sus issues o user stories en el tablero. Además, en futuras iteraciones se estimará también el esfuerzo de cada una de ellas, para luego comparar los dos valores y en base a ello adaptar el proceso. Ejemplo:
+Para medir el esfuerzo en HS-P de cada issue o user story, cada persona deberá marcar y actualizar la medida de esfuerzo dedicada (en HS-P) en cada una de sus issues o user stories en el tablero. Además, en futuras iteraciones se estimará también el esfuerzo de cada una de ellas, para luego comparar los dos valores y en base a ello adaptar el proceso. Utilizaremos las métricas como medio de feedback para adaptar el proceso. Ejemplo:
 
 <img src="/imagenes/ejemplo_card_esfuerzo.png" style="height: 250px" />
 
