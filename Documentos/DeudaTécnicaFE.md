@@ -36,7 +36,7 @@ Una buena practica seria importar todos los strings que son utilizados cómo con
  
 ---
  
-En este método, los 3 bloques else if pueden ser suplantados por un único bloque con un || entre las 3 condiciones, ya que, en los 3 se ejecuta el mismo código.
+En este método, los 3 bloques else if pueden ser suplantados por un único bloque con un || entre las 3 condiciones ya que en los 3 se ejecuta el mismo código.
  
 <img src="../Imagenes/ifElse.png" alt="drawing" style="width:450px;"/>
  
@@ -44,7 +44,7 @@ En este método, los 3 bloques else if pueden ser suplantados por un único bloq
  
 ---
  
-Existen dependencias que no se utilizan, una buena practica seria eliminar todas las dependencias innecesarias
+Existen dependencias que no se utilizan, una buena práctica sería eliminar todas las dependencias innecesarias
  
 <img src="../Imagenes/dependancy.png" alt="drawing" style="width:450px;"/>
  
@@ -102,4 +102,56 @@ En este archivo, podría ser una buena idea ordenar los imports alfabéticamente
  
 ---
  
-## Bugs
+## Bugs Front End
+
+---
+
+Un bug que se puede ver repetidas veces a los largo del Front End de la aplicación son las faltas de ortografía. En particular, la omisión casi total de los tildes: 
+
+<img src="../Imagenes/bugFE-tildes.png" alt="drawing" style="width:450px;"/>
+
+--- 
+
+Otro bug generalizado se da en la *responsiveness* del sistema. Por ejemplo, dado un width pequeño del browser el texto "Aquí puedes crear puntos turísticos!" se descentra:
+
+<img src="../Imagenes/bugFE-responsiveness.png" alt="drawing" style="width:450px;"/>
+
+Otro ejemplo es la sección de Explorar:
+
+<img src="../Imagenes/bugFE-responsiveness2.png" alt="drawing" style="width:450px;"/>
+
+---
+
+Cuando se accede a la sección de 'Hospedajes' de la página, la lista que se despliega contiene un índice que no es funcional:
+
+<img src="../Imagenes/bugFE-listaHospedajes.png" alt="drawing" style="width:450px;"/>
+
+---
+
+La sección de 'Reporte' de la página comienza desplegando ciertos elementos que son reemplazados en seguida por otros. En caso de que esté cargando debería de tener un feedback correspondiente:
+
+<img src="../Imagenes/bugFE-reporteCarga.png" alt="drawing" style="width:450px;"/>
+
+
+---
+
+Cuando se hace hover sobre el navegador de la página en el lado izquierdo, "Punto Turístico" aparece en dos líneas y en seguida se mueve a una, lo cual tiene una efecto de visualización defectuoso:
+
+<img src="../Imagenes/bugFE-hoverNav1.png" alt="drawing" style="width:150px;"/>
+
+<img src="../Imagenes/bugFE-hoverNav2.png" alt="drawing" style="width:150px;"/>
+
+
+---
+
+En la sección Explorar, cuando el width del browser en pequeño las opciones de huespedes se superponen:
+
+<img src="../Imagenes/bugFE-componentesSinSuper.png" alt="drawing" style="width:450px;"/>
+
+<img src="../Imagenes/bugFE-componentesSuperposicion.png" alt="drawing" style="width:450px;"/>
+
+---
+
+En la sección Tu opinión, el campo para escribir la Reseña puede ser expandido indefinidamente, hasta resultar demasiado extenso:
+
+<img src="../Imagenes/bugFE-reseñaExtensa.png" alt="drawing" style="width:450px;"/>
