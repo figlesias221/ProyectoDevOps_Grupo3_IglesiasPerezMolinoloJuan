@@ -58,7 +58,7 @@ Extraer `this.resortSearchModel.acommodationDetails` para no tener que repetirlo
  
 Utilizar nombres descriptivos, en este caso puede no quedar claro lo que es `p`
  
-<img src="../Imagenes/unused.png" alt="drawing" style="width:450px;"/>
+<img src="../Imagenes/param.png" alt="drawing" style="width:450px;"/>
  
 ---
  
