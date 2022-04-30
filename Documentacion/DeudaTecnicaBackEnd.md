@@ -50,7 +50,9 @@ Partiendo de la base que el día de mañana el FrontEnd puede cambiar y la lógi
 
 Si bien esto se puede manejar a nivel del FrontEnd (siempre asumiendo que la hora es la misma para ambos *CheckIn* y  *CheckOut*), a nivel de Backend esto presenta una vulnerabilidad que puede ser explotada si el Frontend cambia a futuro.
 
-**Reusabilidad**
+**Acoplamiento**
+
+De **BusinessLogic** con **DataAccess**:
 
 Algo que llama la atención del paquete **BusinessLogic** del proyecto es la poca lógica que contiene. Si vemos las clases de lógica, los métodos lo único que hacen es llamadas al acceso a datos. Ejemplo:
 
@@ -64,13 +66,14 @@ public Category GetCategoryById(int categoryId)
 ````
 public Region GetRegionById(int regionId)
 {
-            return _repositoryFacade.GetRegionById(regionId);
+    return _repositoryFacade.GetRegionById(regionId);
 }
 ````
 
 Esto sucede porque gran partes de las validaciones y el manejo de excepciones suceden en el paquete de *DataAccess*. Esto es un error dado que si queremos tener un diseño desacoplado a un mecanismo de persistencia específico, las reglas del negocio no pueden ser parte de este. La persistencia debe poder cambiar sin afectar la lógica. 
 
 Con el diseño actual, si cambia el mecanismo de persistencia, perdemos todas estas validaciones con él. Estas validaciones deben ser parte de la lógica de negocios, para que si en el futuro la persistencia cambia, la lógica de negocios se mantenga inafectada. El paquete de persistencia únicamente debe ser CRUD, y nada más. 
+
 
 **Ineficiencias**
 
@@ -123,6 +126,32 @@ private void ValidateName()
 ````
 
 Extráyendola como un atributo constante de la clase, no solamente la podemos reusar sino que también le podemos dar un nombre explicativo que describa qué es lo que valida (*matchea*) esta expresión regular.
+
+Otro ejemplo en el que vemos esto es en la clase *XMLImporter* ("File to parse"):
+````
+public XMLImporter(IConfiguration configuration)
+{
+    ....
+
+    _requiredParameters = new List<ImporterParameterDescription>()
+    {
+        new ImporterParameterDescription()
+        {
+            Name = "File to parse",
+            Type = PossibleParameters.File
+        }
+    };
+}
+
+public List<ImportedResort> RetrieveResorts(List<ImportingParameterValue> parameters)
+{
+    ....
+    string fileName = parameters.Find(p => p.Name == "File to parse").Value;
+    ....
+}
+````
+
+Buscamos reusar estas constantes, y darle explicación a ellas para quien lee el código.
 
 Esto lo vemos también en los tests. Todas las constantes que se utilizan con propósitos de testing deben ser extraídas como atributos constantes de la clase, con nombres descriptivos, y se debe apostar a reusarlas, en la medida de lo posible, en los distintos tests. De esa forma, los tests se vuelven más manejables.
 
@@ -214,6 +243,40 @@ public bool IsTokenValid(Guid id)
     }
 }
 ````
+
+**Tests identificados con números**
+
+- Se repite varias veces el tener tests identificados con números, por ejemplo:
+````
+public void TotalPriceForAccommodationCalculatedCorrectly1() { ... }
+public void TotalPriceForAccommodationCalculatedCorrectly2() { ... }
+public void TotalPriceForAccommodationCalculatedCorrectly3() { ... }
+public void TotalPriceForAccommodationCalculatedCorrectly4() { ... }
+````
+
+```
+
+public void UpdateResortPunctuationDoesAsExpected1()
+public void UpdateResortPunctuationDoesAsExpected1()
+public void UpdateResortPunctuationDoesAsExpected1()
+public void UpdateResortPunctuationDoesAsExpected1()
+````
+
+Si los tests están testeando el mismo código entonces no tiene sentido tener tests repetidos. Por otro lado, si los tests, cada uno de ellos, están testeando diferentes flujos (como ya sea uno que atrapa una excepción y hace determinada operación) entonces se recomienda ponerle un nombre descriptivo al test que lo diferencie de los demás. Igualmente, en este caso nos encontramos frente al primer caso, los tests testean lo mismo.
+
+Esto se ve corregido en otros tests, en los que se usa la anotación *DataTestMethod* para cuando queremos testear con más de un set de parámetros, que es lo que proponemos para resolver el problema antes descrito:
+
+````
+
+[DataTestMethod]
+[DataRow(GuestType.Baby, 3)]
+[DataRow(GuestType.Baby, 1)]
+[DataRow(GuestType.Baby, 6)]
+public void DiscountAppliesToAllBabies(GuestType guestType, int amountGuests) { ... }
+````
+
+
+
 
 
 
