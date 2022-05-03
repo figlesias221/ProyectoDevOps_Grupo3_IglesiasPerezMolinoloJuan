@@ -60,4 +60,6 @@ Designamos a Andrés como el responsable de la creación de las issues (tarjetas
 
 ## Documentos
 
-[DeudaTécnicaFE](./Documentos/DeudaT%C3%A9cnicaFE.md)
+[Deuda Técnica FE](./Documentos/DeudaT%C3%A9cnicaFE.md)
+
+[Informe de calidad y deuda técnica](./Documentos/InformeCalidad.md)
