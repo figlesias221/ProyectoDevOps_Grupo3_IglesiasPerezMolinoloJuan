@@ -2,6 +2,8 @@
 
 ### Análisis estático del código
 
+---
+
 A nivel del backend, si analizamos el código de forma estática, se destacan los siguientes aspectos:
 
 **Errores de lógica**: observamos que hay ciertos errores de lógica. Por ejemplo, si observamos la clase **ResortPricingCalcuator** vemos el siguiente:
@@ -50,6 +52,8 @@ Partiendo de la base que el día de mañana el FrontEnd puede cambiar y la lógi
 
 Si bien esto se puede manejar a nivel del FrontEnd (siempre asumiendo que la hora es la misma para ambos *CheckIn* y  *CheckOut*), a nivel de Backend esto presenta una vulnerabilidad que puede ser explotada si el Frontend cambia a futuro.
 
+---
+
 **Acoplamiento**
 
 De **BusinessLogic** con **DataAccess**:
@@ -74,6 +78,7 @@ Esto sucede porque gran partes de las validaciones y el manejo de excepciones su
 
 Con el diseño actual, si cambia el mecanismo de persistencia, perdemos todas estas validaciones con él. Estas validaciones deben ser parte de la lógica de negocios, para que si en el futuro la persistencia cambia, la lógica de negocios se mantenga inafectada. El paquete de persistencia únicamente debe ser CRUD, y nada más. 
 
+---
 
 **Ineficiencias**
 
@@ -94,13 +99,14 @@ return updatedAdministrator;
 
 Esto es ineficiente y desperdicia recursos; es mejor hacer que el repositorio para las operaciones *create* o *update* directamente devuelva la entidad que se quiere retornar, sin necesidad de hacer un *get* extra. Haciendo este *get* potencialmente necesitamos crear otra conexión con la base de datos, ir a buscar nuevamente el dato a la base de datos lo cual implica reducir la latencia y en fin, desperdiciar recursos y performance.
 
+---
 **Principios de diseño**
 
 Tras abordar el proyecto, notamos que se hace protagonista la clase **RepositoryFacade**: una fachada del paquete de *DataAccess*. Esta es utilizada por *BusinessLogic* para llevar a cabo toda operación de acceso a datos, es decir, todas las clases en *BusinessLogic* la utilizan.
 
 A nivel de deuda técnica, no creemos que este sea el mejor diseño, ya que como resultado tenemos una clase **RepositoryFacade** con demasiadas responsabilidades: el CRUD de cada entidad (la clase tiene un total de 25 métodos publicos). La clase, por tanto, no cumple con SRP (Single Responsibility Principle), teniendo así muchos motivos de cambio que pueden afectar a la amplia variedad de clases que la utilizan (todas las clases en *BusinessLogic*). Para cumplir con SRP y también con ISP (Interface Seggregation Principle), creemos que sería una mejor idea tener una interfaz para cada repositorio específico, e inyectar la dependencia del repositorio en particular que la clase necesite utilizar, sin necesidad de acoplarnos a una interfaz de la cual necesitamos solo un subconjunto muy reducido de todas las operaciones que ofrece.
 
-
+---
 **Clean code: uso de constantes (strings) en el código**
 
 En lo que refiere al uso de constantes, vemos que repetidamente aparecen *magic constants* (constantes que yacen en el código, sin significado alguno). 
@@ -187,7 +193,7 @@ public void TouristPointWithInvalidImageFailsValidation()
     touristPoint.ValidOrFail();
 }
 ````
-
+---
 **Connection Strings**
 
 ````
@@ -199,10 +205,12 @@ Otro aspecto con el que vemos constantes en el código es en el hardcodeo del co
 
 Además, si pensamos en tener una base de datos por ambiente (es decir, una de dev y otra de producción), los archivos de configuración se vuelven realmente importantes para diferenciar el connection string de dev con el de prod, leyendo el archivo correspondiente al ambiente en el que estemos.
 
+---
 **Manejo de excepciones pobre**
 
 El paquete de exceptions cuenta únicamente con dos clases Exception: *InvalidRequestDataException* y *ResourceNotFoundException*. Esto significa que hay ciertos escenarios que quedan por fuera del alcance de estas excepciones, como pueden ser: falta de autenticación, falta de permisos para acceder a ciertas funcionalidades, u operaciones como querer hacer una reserva en un resort que no está disponible. Es decir, faltan excepciones propias al sistema, para evitar tener que utilizar las que son propias del lenguaje. 
 
+---
 **Aspectos de clean code en general**
 
 Se observan algunas mejoras leves a nivel de clean code:
@@ -244,6 +252,7 @@ public bool IsTokenValid(Guid id)
 }
 ````
 
+---
 **Tests identificados con números**
 
 - Se repite varias veces el tener tests identificados con números, por ejemplo:
