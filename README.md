@@ -56,5 +56,8 @@ Definimos las siguientes columnas, considerando que en esta etapa del proyecto n
 - QA
 - Done
 
-
 Designamos a Andrés como el responsable de la creación de las issues (tarjetas) en el tablero. Las issues deben ser explicativas, fáciles de entender y a su vez. Si bien Andrés será el encargado de la creación de las tarjetas, luego de creadas estas se discutirán y aclararán entre todos en la próxima ceremonia de daily stand up.
+
+## Documentos
+
+[DeudaTécnicaFE](./Documentos/DeudaT%C3%A9cnicaFE.md)
