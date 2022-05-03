@@ -11,7 +11,7 @@ El proceso de ingeniería lo podemos encontrar aquí: [Proceso de ingeniería](.
 ## Informe de calidad y deuda técnica
 
 Para ver el informe de calidad y deuda técnica, podemos observar los siguientes enlaces:
-- [Introducción al informe de calidad y deuda técnica](./Documentos/InformeCalidad.md)
+- [Introducción al informe de calidad y deuda técnica](./Documentos/IntroduccionInformeCalidad.md)
 - [Análisis estático del código del backend](./Documentos/AnalisisEstaticoCodigoBackEnd.md)
 - [Análisis estático del código del frontend](./Documentos/AnalisisEstaticoCodigoFrontEnd.md)
 - [Testing exploratorio: bugs encontrados](./Documentos/TestingExploratorio.md)
