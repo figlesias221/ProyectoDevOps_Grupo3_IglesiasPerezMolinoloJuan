@@ -2,7 +2,9 @@
 
 ## Análisis estático de código
 
-### Clean Code
+---
+
+### **Clean Code**
 
 El uso de comentarios generalmente no es recomendado y la mayoría violan los principios de Clean Code.
 
@@ -12,7 +14,7 @@ CC sobre comentarios:
 
 - “_The best comment is a good name for a method or class.”_
 
-Utilización comentarios redundantes
+Utilización comentarios redundantes:
 
 <img src="../Imagenes/comentarios1.png" alt="drawing" style="width:500px;"/>
  
@@ -40,7 +42,9 @@ En este método, los 3 bloques else if pueden ser suplantados por un único bloq
  
 <img src="../Imagenes/ifElse.png" alt="drawing" style="width:450px;"/>
  
-`else if (error.status === 400 || error.status === 409 || error.status === 500){ alert(error.error); handled = true; }`
+ ```
+ else if (error.status === 400 || error.status === 409 || error.status === 500){ alert(error.error); handled = true; }
+```
  
 ---
  
@@ -62,17 +66,17 @@ Utilizar nombres descriptivos, en este caso puede no quedar claro lo que es `p`
  
 ---
  
-### Mejoras
+### **Mejoras**
  
 Un aspecto que es de GRAN ayuda para ordenar, organizar y visualizar el código es usar algún formateador de código, cómo puede ser `Prettier`. Para dar un poco de perspectiva:
  
-**Sin Prettier:**
- 
+<ins>Sin Prettier:</ins>
+
 El código queda fuera de la pantalla horizontalmente y se hace tedioso de leer y entender.
- 
+
 <img src="../Imagenes/prettier1.png" alt="drawing" style="width:450px;"/>
  
-**Con Prettier:**
+<ins>Con Prettier:</ins>
  
 <img src="../Imagenes/prettier3.png" alt="drawing" style="width:450px;"/>
  
@@ -158,17 +162,40 @@ En la sección Tu opinión, el campo para escribir la Reseña puede ser expandid
 
 ## Bugs Integración
 
-En cuanto a las funcionalidades de los usuarios de tipo **turista**, se observa que funcionan mayoritariamente de manera correcta, sin embargo, hay algunos bugs que se pueden observar:
+### Bugs para los usuarios de tipo **turista**:
+
+Se observa que funcionan mayoritariamente de manera correcta, sin embargo, hay algunos bugs que se pueden observar:
 
 A la hora de consultar sobre una reserva, le descripción de las mismas esta en ingles, mientras que todo el resto de la aplicación está en espanol:
 
-<img src="../Imagenes/bugEnglish.png" alt="drawing" style="width:450px;"/>
- 
----
- 
+## <img src="../Imagenes/bugEnglish.png" alt="drawing" style="width:450px;"/>
+
 A su vez, como turista, al consultar sobre hospedajes en un punto turístico, en vez de mostrar alguna animación de carga o similar, se muestra un error que no se encontraron hospedajes por algunos segundos, y luego se muestra la lista. Esto podría desorientar al usuario, sería mejor agregar una animación de carga.
 
+---
+
+### Bugs para los usuarios de tipo **admin**:
 
 ---
 
 En la lista de Hospedajes, cuando un admin hace doble click para borrar una línea de la tabla, se redirecciona a la página inicial.
+
+---
+
+Como ocurría anteriormente en otras funcionalidades, el sistema a veces da feedback en inglés y a veces espanol, aqui al crear un nuevo punto de hospedaje e ingresar un numero invalido, se muestra un error en ingles:
+
+<img src="../Imagenes/errorIngles.png" alt="drawing" style="width:450px;"/>
+ 
+---
+ 
+Algo recurrente en el sistema es que al realizar una alta, no se borran los campos de texto, una buena solución sería borrar los campos de texto al momento de hacer una alta.
+ 
+---
+ 
+Al eliminar un hospedaje, no hay feedback de eliminación, puede confundir al usuario, más aún cuando se redirecciona a la página inicial, como se mencionó antes.
+ 
+---
+ 
+En la letra dice que un administrador debería poder `Modificar la capacidad actual de un hospedaje.` pero no se permite realizar dicha acción, solamente se puede modificar la disponibilidad de los mismos.
+ 
+<img src="../Imagenes/modify.png" alt="drawing" style="width:450px;"/>
