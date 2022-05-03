@@ -168,7 +168,10 @@ A la hora de consultar sobre una reserva, le descripción de las mismas esta en 
  
 A su vez, como turista, al consultar sobre hospedajes en un punto turístico, en vez de mostrar alguna animación de carga o similar, se muestra un error que no se encontraron hospedajes por algunos segundos, y luego se muestra la lista. Esto podría desorientar al usuario, sería mejor agregar una animación de carga.
 
-
 ---
 
+Bugs para los usuarios de tipo **admin**:
+
 En la lista de Hospedajes, cuando un admin hace doble click para borrar una línea de la tabla, se redirecciona a la página inicial.
+
+En cuanto a las funcionalidades de los usuarios de tipo **turista**, se observa que funcionan mayoritariamente de manera correcta, sin embargo, hay algunos bugs que se pueden observar:
