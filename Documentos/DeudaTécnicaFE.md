@@ -62,7 +62,7 @@ Utilizar nombres descriptivos, en este caso puede no quedar claro lo que es `p`
  
 ---
  
-## Mejoras
+### Mejoras
  
 Un aspecto que es de GRAN ayuda para ordenar, organizar y visualizar el código es usar algún formateador de código, cómo puede ser `Prettier`. Para dar un poco de perspectiva:
  
@@ -106,13 +106,13 @@ En este archivo, podría ser una buena idea ordenar los imports alfabéticamente
 
 ---
 
-Un bug que se puede ver repetidas veces a los largo del Front End de la aplicación son las faltas de ortografía. En particular, la omisión casi total de los tildes: 
+Un bug que se puede ver repetidas veces a los largo del Front End de la aplicación son las faltas de ortografía. En particular, la omisión casi total de los tildes:
 
 <img src="../Imagenes/bugFE-tildes.png" alt="drawing" style="width:450px;"/>
 
---- 
+---
 
-Otro bug generalizado se da en la *responsiveness* del sistema. Por ejemplo, dado un width pequeño del browser el texto "Aquí puedes crear puntos turísticos!" se descentra:
+Otro bug generalizado se da en la _responsiveness_ del sistema. Por ejemplo, dado un width pequeño del browser el texto "Aquí puedes crear puntos turísticos!" se descentra:
 
 <img src="../Imagenes/bugFE-responsiveness.png" alt="drawing" style="width:450px;"/>
 
@@ -130,8 +130,7 @@ Cuando se accede a la sección de 'Hospedajes' de la página, la lista que se de
 
 La sección de 'Reporte' de la página comienza desplegando ciertos elementos que son reemplazados en seguida por otros. En caso de que esté cargando debería de tener un feedback correspondiente:
 
-<img src="../Imagenes/bugFE-reporteCarga.png" alt="drawing" style="width:450px;"/>
-
+<img src="../Imagenes/bugFE-ReporteCarga.png" alt="drawing" style="width:450px;"/>
 
 ---
 
@@ -140,7 +139,6 @@ Cuando se hace hover sobre el navegador de la página en el lado izquierdo, "Pun
 <img src="../Imagenes/bugFE-hoverNav1.png" alt="drawing" style="width:150px;"/>
 
 <img src="../Imagenes/bugFE-hoverNav2.png" alt="drawing" style="width:150px;"/>
-
 
 ---
 
@@ -154,4 +152,18 @@ En la sección Explorar, cuando el width del browser en pequeño las opciones de
 
 En la sección Tu opinión, el campo para escribir la Reseña puede ser expandido indefinidamente, hasta resultar demasiado extenso:
 
-<img src="../Imagenes/bugFE-reseñaExtensa.png" alt="drawing" style="width:450px;"/>
+<img src="../Imagenes/bugFE-ReseñaExtensa.png" alt="drawing" style="width:450px;"/>
+
+---
+
+## Bugs Integración
+
+En cuanto a las funcionalidades de los usuarios de tipo **turista**, se observa que funcionan mayoritariamente de manera correcta, sin embargo, hay algunos bugs que se pueden observar:
+
+A la hora de consultar sobre una reserva, le descripción de las mismas esta en ingles, mientras que todo el resto de la aplicación está en espanol:
+
+<img src="../Imagenes/bugEnglish.png" alt="drawing" style="width:450px;"/>
+ 
+---
+ 
+A su vez, como turista, al consultar sobre hospedajes en un punto turístico, en vez de mostrar alguna animación de carga o similar, se muestra un error que no se encontraron hospedajes por algunos segundos, y luego se muestra la lista. Esto podría desorientar al usuario, sería mejor agregar una animación de carga.
