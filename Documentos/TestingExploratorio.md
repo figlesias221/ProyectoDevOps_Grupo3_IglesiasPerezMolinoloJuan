@@ -131,6 +131,7 @@ Repetidas veces a lo largo del frontend observamos faltas de ortografía. En par
 
 <img src="../Imagenes/bugFE-tildes.png" alt="drawing" style="width:450px;"/>
 
+
 Severidad: alta.
 
 ---
@@ -158,6 +159,7 @@ Severidad: baja.
 
 Al eliminar un hospedaje, no hay feedback de eliminación, puede confundir al usuario, más aún cuando se redirecciona a la página inicial, como se mencionó antes.
  
+
 Severidad: media.
 
 ---

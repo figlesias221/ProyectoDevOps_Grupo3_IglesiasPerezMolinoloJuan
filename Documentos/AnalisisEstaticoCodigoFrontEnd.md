@@ -1,8 +1,10 @@
-# Análisis Deuda Técnica FE
+## Análisis de la Deuda Técnica del FrontEnd
 
-## Análisis estático de código
+### Análisis estático de código
 
-### Clean Code
+---
+
+### **Clean Code**
 
 El uso de comentarios generalmente no es recomendado y la mayoría violan los principios de Clean Code.
 
@@ -12,7 +14,7 @@ CC sobre comentarios:
 
 - “_The best comment is a good name for a method or class.”_
 
-Utilización comentarios redundantes
+Utilización comentarios redundantes:
 
 <img src="../Imagenes/comentarios1.png" alt="drawing" style="width:500px;"/>
  
@@ -40,7 +42,9 @@ En este método, los 3 bloques else if pueden ser suplantados por un único bloq
  
 <img src="../Imagenes/ifElse.png" alt="drawing" style="width:450px;"/>
  
-`else if (error.status === 400 || error.status === 409 || error.status === 500){ alert(error.error); handled = true; }`
+ ```
+ else if (error.status === 400 || error.status === 409 || error.status === 500){ alert(error.error); handled = true; }
+```
  
 ---
  
@@ -62,17 +66,17 @@ Utilizar nombres descriptivos, en este caso puede no quedar claro lo que es `p`
  
 ---
  
-### Mejoras
+### **Mejoras**
  
 Un aspecto que es de GRAN ayuda para ordenar, organizar y visualizar el código es usar algún formateador de código, cómo puede ser `Prettier`. Para dar un poco de perspectiva:
  
-**Sin Prettier:**
- 
+<ins>Sin Prettier:</ins>
+
 El código queda fuera de la pantalla horizontalmente y se hace tedioso de leer y entender.
- 
+
 <img src="../Imagenes/prettier1.png" alt="drawing" style="width:450px;"/>
  
-**Con Prettier:**
+<ins>Con Prettier:</ins>
  
 <img src="../Imagenes/prettier3.png" alt="drawing" style="width:450px;"/>
  
@@ -102,73 +106,3 @@ En este archivo, podría ser una buena idea ordenar los imports alfabéticamente
  
 ---
  
-## Bugs Front End
-
----
-
-Un bug que se puede ver repetidas veces a los largo del Front End de la aplicación son las faltas de ortografía. En particular, la omisión casi total de los tildes:
-
-<img src="../Imagenes/bugFE-tildes.png" alt="drawing" style="width:450px;"/>
-
----
-
-Otro bug generalizado se da en la _responsiveness_ del sistema. Por ejemplo, dado un width pequeño del browser el texto "Aquí puedes crear puntos turísticos!" se descentra:
-
-<img src="../Imagenes/bugFE-responsiveness.png" alt="drawing" style="width:450px;"/>
-
-Otro ejemplo es la sección de Explorar:
-
-<img src="../Imagenes/bugFE-responsiveness2.png" alt="drawing" style="width:450px;"/>
-
----
-
-Cuando se accede a la sección de 'Hospedajes' de la página, la lista que se despliega contiene un índice que no es funcional:
-
-<img src="../Imagenes/bugFE-listaHospedajes.png" alt="drawing" style="width:450px;"/>
-
----
-
-La sección de 'Reporte' de la página comienza desplegando ciertos elementos que son reemplazados en seguida por otros. En caso de que esté cargando debería de tener un feedback correspondiente:
-
-<img src="../Imagenes/bugFE-ReporteCarga.png" alt="drawing" style="width:450px;"/>
-
----
-
-Cuando se hace hover sobre el navegador de la página en el lado izquierdo, "Punto Turístico" aparece en dos líneas y en seguida se mueve a una, lo cual tiene una efecto de visualización defectuoso:
-
-<img src="../Imagenes/bugFE-hoverNav1.png" alt="drawing" style="width:150px;"/>
-
-<img src="../Imagenes/bugFE-hoverNav2.png" alt="drawing" style="width:150px;"/>
-
----
-
-En la sección Explorar, cuando el width del browser en pequeño las opciones de huespedes se superponen:
-
-<img src="../Imagenes/bugFE-componentesSinSuper.png" alt="drawing" style="width:450px;"/>
-
-<img src="../Imagenes/bugFE-componentesSuperposicion.png" alt="drawing" style="width:450px;"/>
-
----
-
-En la sección Tu opinión, el campo para escribir la Reseña puede ser expandido indefinidamente, hasta resultar demasiado extenso:
-
-<img src="../Imagenes/bugFE-ReseñaExtensa.png" alt="drawing" style="width:450px;"/>
-
----
-
-## Bugs Integración
-
-En cuanto a las funcionalidades de los usuarios de tipo **turista**, se observa que funcionan mayoritariamente de manera correcta, sin embargo, hay algunos bugs que se pueden observar:
-
-A la hora de consultar sobre una reserva, le descripción de las mismas esta en ingles, mientras que todo el resto de la aplicación está en espanol:
-
-<img src="../Imagenes/bugEnglish.png" alt="drawing" style="width:450px;"/>
- 
----
- 
-A su vez, como turista, al consultar sobre hospedajes en un punto turístico, en vez de mostrar alguna animación de carga o similar, se muestra un error que no se encontraron hospedajes por algunos segundos, y luego se muestra la lista. Esto podría desorientar al usuario, sería mejor agregar una animación de carga.
-
-
----
-
-En la lista de Hospedajes, cuando un admin hace doble click para borrar una línea de la tabla, se redirecciona a la página inicial.
