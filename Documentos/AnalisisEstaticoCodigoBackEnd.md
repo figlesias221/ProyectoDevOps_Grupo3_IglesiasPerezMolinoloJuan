@@ -283,6 +283,58 @@ Esto se ve corregido en otros tests, en los que se usa la anotación *DataTestMe
 [DataRow(GuestType.Baby, 6)]
 public void DiscountAppliesToAllBabies(GuestType guestType, int amountGuests) { ... }
 ````
+---
+**Comparación de strings usando `==`**
+
+A modo de ejemplo, en el siguiente método, dentro de la clase `JSONImporter`, podemos ver que se realiza la comparación de strings utilizando `==`, en vez de usando el método `.equals`. 
+
+```
+public List<ImportedResort> RetrieveResorts(List<ImportingParameterValue> parameters)
+        {
+            List<ImportedResort> parsedResorts = new List<ImportedResort>();
+
+            ValidateParametersOrFail(parameters);
+            string fileName = parameters.Find(p => p.Name == "File to parse").Value; 
+
+            try
+            {
+                ...
+```
+
+Por más que el operador `==` compara strings, usar `.equals` es más robusto ya que permite la comparación de strings ignorando si son en mayúsculas o minúsculas.
+
+---
+**Importación de múltiples archivos** 
+
+Podemos ver, dentro de la clase `JSONImporter`, que no es posible importar múltiples archivos JSON. Esto se debe a que la siguiente línea:
+
+```
+    string fileName = parameters.Find(p => p.Name == "File to parse").Value; 
+```
+
+Encuentra solo el primer valor que tenga `p.Name` igual a `"File to Parse"`. En caso de querer importar múltiples archivos, no será posible hacerlo.
+
+---
+Dentro del paquete `Models`, no se encontraron bugs evidentes o carencias en lo que respectan a buenos estándares y prácticas de codificación (Clean Code, uso de patrones, etc.)
+
+También, podemos ver que en el paquete `ServiceRegistration`, los paquetes se registran correctamente a su interfaz, para cumplir así con el principio de inversión de dependencias.
+
+---
+**Códigos de respuesta en la API**
+
+Una carencia encontrada al realizar este análisis estático fue el hecho que todos los endpoints devuelven `200 OK`, indistintamente del resultado. Esto no es correcto, ya que, si busco un usuario que no existe, el código de respuesta debería indicarlo, en vez de indicar que la solicitud fue exitosa.
+
+```
+[HttpGet("{id:int}")]
+        public IActionResult GetSpecificRegion(int id)
+        {
+            Region retrievedRegion = _regionManager.GetRegionById(id);
+            RegionBasicInfoModel regionModel = new RegionBasicInfoModel(retrievedRegion);
+            return Ok(regionModel);
+        }
+```
+
+De lo anterior, surge también el hecho que no existe el manejo de excepciones a nivel de los endpoints. Debido a esto, no se pueden retornar distintos códigos de error en función de la respuesta obtenida de la lógica. 
 
 
 
