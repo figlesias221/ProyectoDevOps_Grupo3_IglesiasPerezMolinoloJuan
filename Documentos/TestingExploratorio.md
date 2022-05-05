@@ -24,8 +24,11 @@ Severidad: alta.
 
 **Error de fechas en reserva de hospedajes**
 Cuando buscamos un hospedaje en un punto turístico e ingresamos un rango de fechas para la reserva, estas fechas son posteriormente modificadas durante el *checkout*:
+
 <img src="../Imagenes/bugFE-fechasIngresadas.png" alt="drawing" style="width:450px;"/>
+
 Y luego:
+
 <img src="../Imagenes/bugFE-fechasReserva.png" alt="drawing" style="width:450px;"/>
 
 También sucede que si seleccionamos la fecha de hoy se nos presenta un error incorrecto diciendo que no se pueden hacer reservas para días anterior al actual, cuando estamos seleccionando el actual:
