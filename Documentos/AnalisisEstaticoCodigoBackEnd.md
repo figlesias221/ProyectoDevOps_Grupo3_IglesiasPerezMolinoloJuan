@@ -194,6 +194,23 @@ public void TouristPointWithInvalidImageFailsValidation()
 }
 ````
 ---
+**Códigos de respuesta en la API**
+
+Una carencia encontrada al realizar este análisis estático fue el hecho que todos los endpoints devuelven `200 OK`, indistintamente del resultado. Esto no es correcto, ya que, si busco un usuario que no existe, el código de respuesta debería indicarlo, en vez de indicar que la solicitud fue exitosa.
+
+```
+[HttpGet("{id:int}")]
+        public IActionResult GetSpecificRegion(int id)
+        {
+            Region retrievedRegion = _regionManager.GetRegionById(id);
+            RegionBasicInfoModel regionModel = new RegionBasicInfoModel(retrievedRegion);
+            return Ok(regionModel);
+        }
+```
+
+De lo anterior, surge también el hecho que no existe el manejo de excepciones a nivel de los endpoints. Debido a esto, no se pueden retornar distintos códigos de error en función de la respuesta obtenida de la lógica. 
+
+---
 **Connection Strings**
 
 ````
@@ -318,23 +335,6 @@ Encuentra solo el primer valor que tenga `p.Name` igual a `"File to Parse"`. En 
 Dentro del paquete `Models`, no se encontraron bugs evidentes o carencias en lo que respectan a buenos estándares y prácticas de codificación (Clean Code, uso de patrones, etc.)
 
 También, podemos ver que en el paquete `ServiceRegistration`, los paquetes se registran correctamente a su interfaz, para cumplir así con el principio de inversión de dependencias.
-
----
-**Códigos de respuesta en la API**
-
-Una carencia encontrada al realizar este análisis estático fue el hecho que todos los endpoints devuelven `200 OK`, indistintamente del resultado. Esto no es correcto, ya que, si busco un usuario que no existe, el código de respuesta debería indicarlo, en vez de indicar que la solicitud fue exitosa.
-
-```
-[HttpGet("{id:int}")]
-        public IActionResult GetSpecificRegion(int id)
-        {
-            Region retrievedRegion = _regionManager.GetRegionById(id);
-            RegionBasicInfoModel regionModel = new RegionBasicInfoModel(retrievedRegion);
-            return Ok(regionModel);
-        }
-```
-
-De lo anterior, surge también el hecho que no existe el manejo de excepciones a nivel de los endpoints. Debido a esto, no se pueden retornar distintos códigos de error en función de la respuesta obtenida de la lógica. 
 
 
 
