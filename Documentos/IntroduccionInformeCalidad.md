@@ -6,7 +6,6 @@ A grandes rasgos, la aplicación es funcional y está en un estado aceptable. Si
 
 A nivel de requerimientos, la gran mayoría se cumplen satisfactoriamente pero existen algunos que no se cumplen. Por ejemplo, un administrador no puede **"Modificar la capacidad actual de un hospedaje"** a través de la interfaz web. 
 
-En cuanto a la calidad del código: el mismo es comprensible, la arquitectura está diseñada acordemente y es modificable. De todos modos se encontraron puntos débiles como la falta de Clean Code, los cuales se podrán ver más adelante en este informe.
+En cuanto a la calidad del código: el mismo es comprensible, la arquitectura está diseñada acordemente y es modificable. De todos modos, se encontraron puntos débiles -como la falta de Clean Code- que se podrán ver más adelante en este informe.
 
-La interfaz de usuario facilita la utilización de las funcionalidades del sistema y destacamos positivamente la navegación y diseño. Asimismo, existe una gran cantidad de bugs en el front end, tanto funcionales como de UI. En algunos casos, por ejemplo cuando se modifica el tamaño de la ventana en la que se despliega, los componentes se superponen y la funcionalidad se ve afectada. Además, varios aspectos de la página web tienen defectos como errores de ortografía o un diseño que reduce la usabilidad, todos de los cuales se verán evidenciados a continuación.
-
+La interfaz de usuario facilita la utilización de las funcionalidades del sistema y destacamos positivamente la navegación y diseño. Asimismo, existe una gran cantidad de bugs en el front end, tanto funcionales como de UI. Por ejemplo, cuando se modifica el tamaño de la ventana en la que se despliega, los componentes se superponen y la funcionalidad se ve afectada. Además, varios aspectos de la página web tienen defectos como errores de ortografía o un diseño que reduce la usabilidad, todos de los cuales se verán evidenciados a continuación.

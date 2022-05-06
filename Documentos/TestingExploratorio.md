@@ -99,7 +99,7 @@ Cuando nos paramos en un elemento que está cerca de la barra lateral, como por 
 
 <img src="../Imagenes/bugFE-SuperposicionBarraLateral.png" alt="drawing" style="width:450px;"/>
 
-Severidad: media.
+Severidad: baja.
 
 ---
 
@@ -131,21 +131,23 @@ Repetidas veces a lo largo del frontend observamos faltas de ortografía. En par
 
 <img src="../Imagenes/bugFE-tildes.png" alt="drawing" style="width:450px;"/>
 
-Severidad: baja.
+
+Severidad: alta.
 
 ---
 
-**Cambio de idioma**
+**Inconsistencia de idioma**
 
 Muchos de los errores se muestran en inglés. Ejemplo:
 
 <img src="../Imagenes/errorIngles.png" alt="drawing" style="width:450px;"/>
  
-Severidad: baja.
+Severidad: media.
 
 ---
  
 **Cleanup del formulario**
+
 Algo recurrente en el sistema es que al realizar una alta, no se borran los campos de texto, una buena solución sería borrar los campos de texto al momento de hacer una alta.
  
 Severidad: baja.
@@ -157,7 +159,8 @@ Severidad: baja.
 
 Al eliminar un hospedaje, no hay feedback de eliminación, puede confundir al usuario, más aún cuando se redirecciona a la página inicial, como se mencionó antes.
  
-Severidad: baja.
+
+Severidad: media.
 
 ---
 
