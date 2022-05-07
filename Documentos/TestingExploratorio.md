@@ -1,3 +1,9 @@
+# Testing Exploratorio
+
+_En este documento se incluyen los diferentes bugs e incumplimientos de requerimientos que fueron encontrados a través de testing exploratorio, cada uno con una descripción, imágenes adjuntas y una severidad._
+
+---
+
 ## Incumplimiento de requerimientos
 
 ---
@@ -5,7 +11,7 @@
 **Falta modificación de capacidad de un hospedaje**
 
 En la letra dice que un administrador debería poder `Modificar la capacidad actual de un hospedaje.` pero no se permite realizar dicha acción, solamente se puede modificar la disponibilidad de los mismos.
- 
+
 <img src="../Imagenes/modify.png" alt="drawing" style="width:450px;"/>
 
 Severidad: alta.
@@ -26,7 +32,7 @@ Severidad: alta.
 
 **Error de fechas en reserva de hospedajes**
 
-Cuando buscamos un hospedaje en un punto turístico e ingresamos un rango de fechas para la reserva, estas fechas son posteriormente modificadas durante el *checkout*:
+Cuando buscamos un hospedaje en un punto turístico e ingresamos un rango de fechas para la reserva, estas fechas son posteriormente modificadas durante el _checkout_:
 
 <img src="../Imagenes/bugFE-fechasIngresadas.png" alt="drawing" style="width:450px;"/>
 
@@ -48,7 +54,7 @@ La funcionalidad de importadores de puntos turísticos y hospedajes es incorrect
 
 Primero que nada, pide un "código único de esta para verificar el estado de esta": algo que no tiene sentido en el contexto de importación de puntos turísticos. Se entiende que está hablando de una reserva, lo cual no tiene sentido por lo cual el mensaje allí está mal. Además la funcionalidad de ver una reserva no aplica para administradores.
 
-Luego, si ingresamos el tipo de importador que queremos utilizar y una ruta válida a un archivo con datos, tira un error y no logra hacer la importación: 
+Luego, si ingresamos el tipo de importador que queremos utilizar y una ruta válida a un archivo con datos, tira un error y no logra hacer la importación:
 
 <img src="../Imagenes/bug-importers.png" alt="drawing" style="width:450px;"/>
 
@@ -74,13 +80,11 @@ Cuando se accede a la sección de 'Hospedajes' de la página, la lista que se de
 
 Severidad: alta.
 
-
 ---
 
 **Momentos de carga**
 
 Como turista, al consultar sobre hospedajes en un punto turístico, en vez de mostrar alguna animación de carga o similar, se muestra un error que no se encontraron hospedajes por algunos segundos, y luego se muestra la lista. Se debería dar feedback al usuario de que se está cargando, dado que la carga es lenta y el usuario piensa que efectivamente no hay hospedajes disponibles, cuando los hay.
-
 
 Severidad: alta.
 
@@ -92,7 +96,8 @@ La falta de un botón de home hace díficil la navegación hacia esta pestaña.
 
 Severidad: media.
 
---- 
+---
+
 **Superposición de la barra lateral frente a elementos que se encuentran cerca de ella**
 
 Cuando nos paramos en un elemento que está cerca de la barra lateral, como por ejemplo el filtrado de puntos turísticos por categorías, se nos abre la barra lateral lo cual dificulta llevar a cabo la acción inicialmente planificada (seleccionar la categoría, en este caso).
@@ -109,7 +114,6 @@ Otro bug generalizado se da en la _responsiveness_ del sistema, cuando se achica
 
 <img src="../Imagenes/bugFE-responsiveness2.png" alt="drawing" style="width:450px;"/>
 
-
 Severidad: media.
 
 ---
@@ -124,13 +128,11 @@ Severidad: baja.
 
 ---
 
-
 **Faltas de ortografía**
 
 Repetidas veces a lo largo del frontend observamos faltas de ortografía. En particular, la omisión casi total de los tildes:
 
 <img src="../Imagenes/bugFE-tildes.png" alt="drawing" style="width:450px;"/>
-
 
 Severidad: alta.
 
@@ -145,24 +147,19 @@ Muchos de los errores se muestran en inglés. Ejemplo:
 Severidad: media.
 
 ---
- 
+
 **Cleanup del formulario**
 
 Algo recurrente en el sistema es que al realizar una alta, no se borran los campos de texto, una buena solución sería borrar los campos de texto al momento de hacer una alta.
- 
+
 Severidad: baja.
 
 ---
- 
+
 **Falta de mensajes de éxito**
 
-
 Al eliminar un hospedaje, no hay feedback de eliminación, puede confundir al usuario, más aún cuando se redirecciona a la página inicial, como se mencionó antes.
- 
 
 Severidad: media.
 
 ---
-
-
- 

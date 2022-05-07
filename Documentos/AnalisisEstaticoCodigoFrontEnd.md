@@ -1,6 +1,10 @@
-## Análisis de la Deuda Técnica del FrontEnd
+# Análisis de la Deuda Técnica del FrontEnd
 
-### Análisis estático de código
+_Este documento incluye el análisis de la Deuda Técnica del FrontEnd. Se especifican los diferentes issues encontrados con una descripción._
+
+---
+
+## Análisis estático de código
 
 ---
 
@@ -105,4 +109,3 @@ En este archivo, podría ser una buena idea ordenar los imports alfabéticamente
 <img src="../Imagenes/dependecies2.png" alt="drawing" style="width:450px;"/>
  
 ---
- 

@@ -1,4 +1,8 @@
-## Proceso de Ingeniería
+# Proceso de Ingeniería
+
+_Este documento incluye la definición del proceso de ingeniería que va a utilizar el equipo. A su vez, se incluye la definición de estrategia de branching, marco de gestión ágil y configuración inicial del tablero Kanban que se utilizarán._
+
+---
 
 A nivel de ingeniería, utilizaremos BDD como framework para desarrollo y mantenimiento. El output de BDD van a ser nuestras user stories, que luego serán sometidas a toda la pipeline definida a continuación (en este orden):
 
@@ -35,7 +39,7 @@ Al final de cada iteración, se mergeará _develop_ a _main_ y se creará un nue
 
 Para medir el esfuerzo en HS-P de cada issue o user story, cada persona deberá marcar y actualizar la medida de esfuerzo dedicada (en HS-P) en cada una de sus issues o user stories en el tablero. Además, en futuras iteraciones se estimará también el esfuerzo de cada una de ellas, para luego comparar los dos valores y en base a ello adaptar el proceso. Utilizaremos las métricas como medio de feedback para adaptar el proceso. Ejemplo:
 
-<img src="/Imagenes/ejemplo_card_esfuerzo.png" style="height: 250px" />
+<img src="../Imagenes/ejemplo_card_esfuerzo.png" style="height: 250px" />
 
 Para la adaptación del proceso utilizaremos las siguientes métricas: lead time, cycle time, deployment frequency, WIP. Para su recopilación y generación utilizaremos el log de movimientos que que genera github cada vez que una issue es se mueve de columna en columna.
 
