@@ -17,3 +17,7 @@ Para ver el informe de calidad y deuda técnica, podemos observar los siguientes
 - [Análisis estático del código del backend](./Documentos/AnalisisEstaticoCodigoBackEnd.md)
 - [Análisis estático del código del frontend](./Documentos/AnalisisEstaticoCodigoFrontEnd.md)
 - [Testing exploratorio: bugs encontrados](./Documentos/TestingExploratorio.md)
+
+## Proceso: stand-ups y retrospectiva
+
+Se pueden encontrar aquí: [Stand-ups y retrospectivas](./Documentos/DocAvance.md)
