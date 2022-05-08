@@ -8,6 +8,8 @@ Letra del obligatorio: https://fi365.sharepoint.com/:w:/s/IngSoft_ISA2/EYTQH9GaZ
 
 El proceso de ingeniería lo podemos encontrar aquí: [Proceso de ingeniería](./Documentos/ProcesoIngenieria.md)
 
+Documentación de las dailies y retrospectivas: [Documentación de avance](./Documentos/DocAvance.md)
+
 ## Informe de calidad y deuda técnica
 
 Para ver el informe de calidad y deuda técnica, podemos observar los siguientes enlaces:
@@ -15,3 +17,7 @@ Para ver el informe de calidad y deuda técnica, podemos observar los siguientes
 - [Análisis estático del código del backend](./Documentos/AnalisisEstaticoCodigoBackEnd.md)
 - [Análisis estático del código del frontend](./Documentos/AnalisisEstaticoCodigoFrontEnd.md)
 - [Testing exploratorio: bugs encontrados](./Documentos/TestingExploratorio.md)
+
+## Proceso: stand-ups y retrospectiva
+
+Se pueden encontrar aquí: [Stand-ups y retrospectivas](./Documentos/DocAvance.md)
