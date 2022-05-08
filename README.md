@@ -29,3 +29,10 @@ Se pueden encontrar aquí: [Stand-ups y retrospectivas](./Documentos/DocAvance.m
 Los detalles de registro de esfuerzo por tarea e integrantes se pueden encontrar en la descripción de cada issue en el Board Ministerio de Turismo: Iteración 1, en el repositorio de Github. Ejemplo:
 
 <img src="./Imagenes/registroEsfuerzo.png" alt="img" style="width:250px;"/>
+
+## Issues identificados ingresados en Github
+
+Fueron ingresados todos los issues identificados a Github con su descripción, una foto del bug si corresponde, su severidad (alta, media o baja) y labels. Esto se puede ver en la sección Issues del repositorio. Ejemplo:
+
+
+<img src="./Imagenes/bugEnGithub.png" alt="img" style="width:500px;"/>
