@@ -1,10 +1,10 @@
 # Introducción al informe de calidad y deuda técnica
 
-Para nuestro informe de calidad y deuda técnica, llevaremos a cabo un análisis que contempla el análisis estático del código (tanto del backend como del frontend) y el testing exploratorio realizado para encontrar bugs en el sistema. 
+Para nuestro informe de calidad y deuda técnica, llevaremos a cabo un análisis que contempla el análisis estático del código (tanto del backend como del frontend) y el testing exploratorio realizado para encontrar bugs en el sistema.
 
 A grandes rasgos, la aplicación es funcional y está en un estado aceptable. Sin embargo, encontramos muchas deficiencias en diferentes niveles de análisis que presentamos a continuación.
 
-A nivel de requerimientos, la gran mayoría se cumplen satisfactoriamente pero existen algunos que no se cumplen. Por ejemplo, un administrador no puede **"Modificar la capacidad actual de un hospedaje"** a través de la interfaz web. 
+A nivel de requerimientos, la gran mayoría se cumplen satisfactoriamente pero existen algunos que no se cumplen. Por ejemplo, un administrador no puede **"Modificar la capacidad actual de un hospedaje"** a través de la interfaz web.
 
 En cuanto a la calidad del código: el mismo es comprensible, la arquitectura está diseñada acordemente y es modificable. De todos modos, se encontraron puntos débiles -como la falta de Clean Code- que se podrán ver más adelante en este informe.
 
