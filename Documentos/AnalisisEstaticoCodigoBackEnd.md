@@ -1,6 +1,6 @@
 # Análisis de la deuda técnica del Backend
 
-_Este documento incluye el análisis de la Deuda Técnica del BackEnd.Se especifican los diferentes problemas/mejoras encontrados con una descripción._
+_Este documento incluye el análisis de la Deuda Técnica del BackEnd. Se especifican los diferentes problemas/mejoras encontrados con una descripción._
 
 ---
 
@@ -42,7 +42,7 @@ foreach(GuestGroup guestGroup in guestGroups)
 
 Si vemos, para cada _GuestGroup_ se hace un _foreach_ de los descuentos disponibles que tiene, y se suma el precio correspondiente al total. Pero, ¿qué pasa si hay más de un descuento para ese grupo de huéspedes? Eso significa que se va a sumar dos veces el precio con cada descuento. Lo que se debería hacer acá es tomar el descuento que descuente más al precio total: considerando el que maximice el descuento considerando el porcentaje y la cantidad de huéspedes para los cuales aplica. Luego, ese es el descuento que se debe elegir para aplicar, pero no sumar el precio resultante de todos los descuentos disponibles, como se hace acá. El problema recae en que el código asume que solo habrá un descuento por cada grupo de huéspedes.
 
-Luego, en esta misma clase vemos otro error de lògica cuando se cálcula la cantidad de noches en una reserva:
+Luego, en esta misma clase vemos otro error de lógica cuando se cálcula la cantidad de noches en una reserva:
 
 ```
 private int GetAmountOfNightsFromAccommodation(Accommodation accommodation)

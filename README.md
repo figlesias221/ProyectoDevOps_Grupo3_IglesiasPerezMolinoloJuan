@@ -4,6 +4,8 @@ Integrantes: Marcelo Pérez -227362-, Federico Iglesias -244831-, Andrés Juan -
 
 Letra del obligatorio: https://fi365.sharepoint.com/:w:/s/IngSoft_ISA2/EYTQH9GaZQlGoOZ21O9BRJEBAk3wSQY6UeoB2SvIKk4c2g?e=6TDPhl
 
+Link al repositorio: [Repositorio](https://github.com/figlesias221/ProyectoDevOps_Grupo3_IglesiasPerezMolinoloJuan)
+
 ## Proceso de ingeniería
 
 El proceso de ingeniería lo podemos encontrar aquí: [Proceso de ingeniería](./Documentos/ProcesoIngenieria.md)
@@ -21,3 +23,9 @@ Para ver el informe de calidad y deuda técnica, podemos observar los siguientes
 ## Proceso: stand-ups y retrospectiva
 
 Se pueden encontrar aquí: [Stand-ups y retrospectivas](./Documentos/DocAvance.md)
+
+## Registro de esfuerzo
+
+Los detalles de registro de esfuerzo por tarea e integrantes se pueden encontrar en la descripción de cada issue en el Board Ministerio de Turismo: Iteración 1, en el repositorio de Github. Ejemplo:
+
+<img src="./Imagenes/registroEsfuerzo.png" alt="img" style="width:250px;"/>
