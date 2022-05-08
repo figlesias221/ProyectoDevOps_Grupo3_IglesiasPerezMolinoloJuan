@@ -10,8 +10,6 @@ Link al repositorio: [Repositorio](https://github.com/figlesias221/ProyectoDevOp
 
 El proceso de ingeniería lo podemos encontrar aquí: [Proceso de ingeniería](./Documentos/ProcesoIngenieria.md)
 
-Documentación de las dailies y retrospectivas: [Documentación de avance](./Documentos/DocAvance.md)
-
 ## Informe de calidad y deuda técnica
 
 Para ver el informe de calidad y deuda técnica, podemos observar los siguientes enlaces:
