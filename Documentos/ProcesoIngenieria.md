@@ -1,6 +1,6 @@
 # Proceso de Ingeniería
 
-_Este documento incluye la definición del proceso de ingeniería que va a utilizar el equipo. A su vez, se incluye la definición de estrategia de branching, marco de gestión ágil y configuración inicial del tablero Kanban que se utilizarán._
+_Este documento incluye la definición del proceso de ingeniería que va a utilizar el equipo. A su vez, se incluye la definición de la estrategia de branching, marco de gestión ágil y configuración inicial del tablero Kanban que se utilizarán._
 
 ---
 

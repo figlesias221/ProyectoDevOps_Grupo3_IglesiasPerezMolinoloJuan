@@ -1,9 +1,5 @@
 # Introducción al informe de calidad y deuda técnica
 
-_Este documento incluye una descripción general sobre lo especificado tanto en el informe de calidad y en los informes de la deuda técnica._
-
----
-
 Para nuestro informe de calidad y deuda técnica, llevaremos a cabo un análisis que contempla el análisis estático del código (tanto del backend como del frontend) y el testing exploratorio realizado para encontrar bugs en el sistema.
 
 A grandes rasgos, la aplicación es funcional y está en un estado aceptable. Sin embargo, encontramos muchas deficiencias en diferentes niveles de análisis que presentamos a continuación.
