@@ -36,7 +36,7 @@ namespace MinTur.Domain.BusinessEntities
             Regex nameRegex = new Regex(@"^[a-zA-ZñÑáéíóúü0-9 ]+$");
 
             if (Name == null || !nameRegex.IsMatch(Name) || Name.Length > 20)
-                throw new InvalidRequestDataException("Invalid tourist point name - only alphanumeric and up to 20 characters");
+                throw new InvalidRequestDataException("Invalid charging point name - only alphanumeric and up to 20 characters");
         }
 
         private void ValidateDescription()
@@ -56,8 +56,8 @@ namespace MinTur.Domain.BusinessEntities
             if (obj == null || obj.GetType() != GetType())
                 return false;
 
-            var touristPoint = obj as TouristPoint;
-            return Id == touristPoint.Id;
+            var chargingPoint = obj as ChargingPoint;
+            return Id == chargingPoint.Id;
         }
 
         public override int GetHashCode()
