@@ -22,12 +22,10 @@ namespace MinTur.Domain.BusinessEntities
         public int RegionId { get; set; }
         [Required]
         public Region Region { get; set; }
-        
-        public ChargingPoint()
-        {
-        }
 
-        public virtual void ValidOrFail() 
+        public ChargingPoint() { }
+
+        public virtual void ValidOrFail()
         {
             ValidateName();
             ValidateDescription();
@@ -37,17 +35,17 @@ namespace MinTur.Domain.BusinessEntities
         {
             Regex nameRegex = new Regex(@"^[a-zA-ZñÑáéíóúü0-9 ]+$");
 
-            if (Name == null || !nameRegex.IsMatch(Name) ||  Name.Length > 20)
+            if (Name == null || !nameRegex.IsMatch(Name) || Name.Length > 20)
                 throw new InvalidRequestDataException("Invalid tourist point name - only alphanumeric and up to 20 characters");
         }
 
-        private void ValidateDescription() 
+        private void ValidateDescription()
         {
             if (Description == null || Description.Length > 60)
                 throw new InvalidRequestDataException("Invalid description - only up to 60 characters");
         }
 
-        private void ValidateDirection() 
+        private void ValidateDirection()
         {
             if (Direction == null || Direction.Length > 30)
                 throw new InvalidRequestDataException("Invalid direction - only up to 30 characters");
