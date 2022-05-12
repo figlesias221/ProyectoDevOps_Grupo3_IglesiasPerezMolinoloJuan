@@ -14,6 +14,7 @@ namespace MinTur.DataAccess.Facades
         private readonly DbContext _context;
         private RegionRepository _regionRepository;
         private TouristPointRepository _touristPointRepository;
+        private ChargingPointRepository _chargingPointRepository;
         private CategoryRepository _categoryRepository;
         private ResortRepository _resortRepository;
         private ReservationRepository _reservationRepository;
@@ -26,6 +27,7 @@ namespace MinTur.DataAccess.Facades
             _context = context;
             _regionRepository = new RegionRepository(_context);
             _touristPointRepository = new TouristPointRepository(_context);
+            _chargingPointRepository = new ChargingPointRepository(_context);
             _categoryRepository = new CategoryRepository(_context);
             _resortRepository = new ResortRepository(_context);
             _reservationRepository = new ReservationRepository(_context);
@@ -92,6 +94,11 @@ namespace MinTur.DataAccess.Facades
         public int StoreTouristPoint(TouristPoint touristPoint)
         {
             return _touristPointRepository.StoreTouristPoint(touristPoint);
+        }
+
+        public int StoreChargingPoint(ChargingPoint chargingPoint)
+        {
+            return _chargingPointRepository.StoreChargingPoint(chargingPoint);
         }
 
         public List<Administrator> GetAllAdministrators()
