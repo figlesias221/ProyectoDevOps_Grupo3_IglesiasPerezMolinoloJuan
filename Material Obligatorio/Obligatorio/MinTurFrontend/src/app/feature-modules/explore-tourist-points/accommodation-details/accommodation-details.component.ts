@@ -84,7 +84,7 @@ export class AccommodationDetailsComponent implements OnInit {
     const checkInDateIsBeforeToday =
       this.checkIn.getFullYear() < this.minDate.getFullYear() &&
       this.checkIn.getMonth() + 1 < this.minDate.getMonth() + 1 &&
-      this.checkOut.getDate() < this.minDate.getDate();
+      this.checkIn.getDate() < this.minDate.getDate();
 
     if (this.chosenTouristPointId == null) {
       validAccommodation = false;
