@@ -32,7 +32,7 @@ namespace MinTur.DataAccess.Repositories
         private bool RegionExists(int regionId)
         {
             Region region = Context.Set<Region>().AsNoTracking().Where(r => r.Id == regionId).FirstOrDefault();
-            // Console.Write(region.Id);
+            
             return region != null;
         }
         private void StoreChargingPointInDb(ChargingPoint chargingPoint) 

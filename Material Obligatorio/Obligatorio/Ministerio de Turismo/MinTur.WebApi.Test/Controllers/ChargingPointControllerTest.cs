@@ -9,6 +9,7 @@ using MinTur.WebApi.Controllers;
 using Microsoft.AspNetCore.Http;
 using MinTur.Models.In;
 using MinTur.Domain.SearchCriteria;
+using System.Text.Json;
 
 namespace MinTur.WebApi.Test.Controllers
 {
@@ -79,7 +80,7 @@ namespace MinTur.WebApi.Test.Controllers
 
             _chargingPointManagerMock.VerifyAll();
             Assert.IsTrue(createdResult.StatusCode == StatusCodes.Status201Created);
-            Assert.AreEqual(new ChargingPointBasicInfoModel(expectedChargingPoint), createdResult.Value);
+            Assert.AreEqual(expectedChargingPoint.Name, (createdResult.Value as ChargingPointIntentModel).Name);
         }
 
         #region Helpers
@@ -89,8 +90,8 @@ namespace MinTur.WebApi.Test.Controllers
             {
                 Name = "Punta del este",
                 Description = "Descripcion...",
-                RegionId = 3,
-                CategoriesId = new List<int>() { 1, 3, 84 }
+                Direction = "Direccion...",
+                RegionId = 3
             };
         }
         public ChargingPoint CreateChargingPoint()
@@ -98,7 +99,7 @@ namespace MinTur.WebApi.Test.Controllers
             return new ChargingPoint()
             {
                 Id = 1,
-                Name = "Punta del Este",
+                Name = "Punta del este",
                 Region = new Region()
                 {
                     Id = 3,
