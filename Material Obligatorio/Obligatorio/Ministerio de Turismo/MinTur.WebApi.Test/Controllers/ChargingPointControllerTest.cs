@@ -59,7 +59,7 @@ namespace MinTur.WebApi.Test.Controllers
         {
             foreach (ChargingPoint chargingPoint in _chargingPoints)
             {
-                _chargingPointsModel.Add(new ChargingPointBasicInfoModel(chargingPoint.Id));
+                _chargingPointsModel.Add(new ChargingPointBasicInfoModel(chargingPoint));
             }
         }
         #endregion
@@ -71,7 +71,7 @@ namespace MinTur.WebApi.Test.Controllers
             ChargingPointIntentModel chargingPointIntentModel = CreateChargingPointIntentModel();
             ChargingPoint expectedChargingPoint = CreateChargingPoint();
 
-            _chargingPointManagerMock.Setup(t => t.RegisterChargingPoint(chargingPointIntentModel.ToEntity())).Returns(expectedChargingPoint.Id);
+            _chargingPointManagerMock.Setup(t => t.RegisterChargingPoint(chargingPointIntentModel.ToEntity())).Returns(expectedChargingPoint);
             ChargingPointController chargingPointController = new ChargingPointController(_chargingPointManagerMock.Object);
 
             IActionResult result = chargingPointController.CreateChargingPoint(chargingPointIntentModel);
@@ -79,7 +79,7 @@ namespace MinTur.WebApi.Test.Controllers
 
             _chargingPointManagerMock.VerifyAll();
             Assert.IsTrue(createdResult.StatusCode == StatusCodes.Status201Created);
-            Assert.AreEqual(new ChargingPointBasicInfoModel(expectedChargingPoint.Id), createdResult.Value);
+            Assert.AreEqual(new ChargingPointBasicInfoModel(expectedChargingPoint), createdResult.Value);
         }
 
         #region Helpers

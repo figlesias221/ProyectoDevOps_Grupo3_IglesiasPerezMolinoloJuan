@@ -16,13 +16,13 @@ namespace MinTur.BusinessLogic.ResourceManagers
             _repositoryFacade = repositoryFacade;
         }
 
-        public int RegisterChargingPoint(ChargingPoint chargingPoint)
+        public ChargingPoint RegisterChargingPoint(ChargingPoint chargingPoint)
         {
             chargingPoint.ValidOrFail();
 
-            int newChargingPointId = _repositoryFacade.StoreChargingPoint(chargingPoint);
+            ChargingPoint newChargingPoint = _repositoryFacade.StoreChargingPoint(chargingPoint);
 
-            return newChargingPointId;
+            return newChargingPoint;
         }
     }
 }

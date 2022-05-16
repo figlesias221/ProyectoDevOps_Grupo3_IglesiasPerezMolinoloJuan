@@ -62,15 +62,14 @@ namespace MinTur.BusinessLogic.Test.ResourceManagers
             ChargingPoint createdChargingPoint = CreateChargingPointWithSpecificId(newChargingPointId);
 
             _chargingPointMock.Setup(t => t.ValidOrFail());
-            _repositoryFacadeMock.Setup(r => r.StoreChargingPoint(_chargingPointMock.Object)).Returns(newChargingPointId);
-            // _repositoryFacadeMock.Setup(r => r.GetChargingPointById(newChargingPointId)).Returns(createdChargingPoint);
+            _repositoryFacadeMock.Setup(r => r.StoreChargingPoint(_chargingPointMock.Object)).Returns(createdChargingPoint);
 
             ChargingPointManager chargingPointManager = new ChargingPointManager(_repositoryFacadeMock.Object);
-            int retrievedChargingPoint = chargingPointManager.RegisterChargingPoint(_chargingPointMock.Object);
+            ChargingPoint retrievedChargingPoint = chargingPointManager.RegisterChargingPoint(_chargingPointMock.Object);
 
             _chargingPointMock.VerifyAll();
             _repositoryFacadeMock.VerifyAll();
-            Assert.AreEqual(newChargingPointId, retrievedChargingPoint);
+            Assert.AreEqual(createdChargingPoint, retrievedChargingPoint);
         }
 
         #region Helpers

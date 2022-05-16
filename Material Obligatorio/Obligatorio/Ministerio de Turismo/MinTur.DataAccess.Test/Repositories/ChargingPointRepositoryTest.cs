@@ -33,10 +33,10 @@ namespace MinTur.DataAccess.Test.Repositories
         public void StoreChargingPointReturnsAsExpected() 
         {
             ChargingPoint touristPoint = LoadRelatedEntitiesAndCreateChargingPoint();
-            int newChargingPointId = _repository.StoreChargingPoint(touristPoint);
+            ChargingPoint newChargingPoint = _repository.StoreChargingPoint(touristPoint);
 
-            Assert.AreEqual(touristPoint.Id, newChargingPointId);
-            Assert.IsNotNull(_context.ChargingPoints.Where(t => t.Id == newChargingPointId).FirstOrDefault());
+            Assert.AreEqual(touristPoint.Id, newChargingPoint.Id);
+            Assert.IsNotNull(_context.ChargingPoints.Where(t => t.Id == newChargingPoint.Id).FirstOrDefault());
         }
 
         [TestMethod]

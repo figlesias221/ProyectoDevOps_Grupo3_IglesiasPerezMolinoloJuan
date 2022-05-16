@@ -96,7 +96,7 @@ namespace MinTur.DataAccess.Facades
             return _touristPointRepository.StoreTouristPoint(touristPoint);
         }
 
-        public int StoreChargingPoint(ChargingPoint chargingPoint)
+        public ChargingPoint StoreChargingPoint(ChargingPoint chargingPoint)
         {
             return _chargingPointRepository.StoreChargingPoint(chargingPoint);
         }

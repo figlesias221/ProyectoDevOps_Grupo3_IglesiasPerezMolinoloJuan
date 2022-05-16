@@ -8,10 +8,18 @@ namespace MinTur.Models.Out
     public class ChargingPointBasicInfoModel
     {
         public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Direction { get; set; }
+        public RegionBasicInfoModel Region { get; set; }
 
-        public ChargingPointBasicInfoModel(int chargingPointId)
+        public ChargingPointBasicInfoModel(ChargingPoint chargingPoint)
         {
-            Id = chargingPointId;
+            Id = chargingPoint.Id;
+            Name = chargingPoint.Name;
+            Description = chargingPoint.Description;
+            Direction = chargingPoint.Direction;
+            Region = new RegionBasicInfoModel(chargingPoint.Region);
         }
 
         public override bool Equals(object obj)
