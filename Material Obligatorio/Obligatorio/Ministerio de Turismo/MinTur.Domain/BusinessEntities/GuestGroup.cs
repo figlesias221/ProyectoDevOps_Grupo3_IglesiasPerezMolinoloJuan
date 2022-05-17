@@ -13,7 +13,7 @@ namespace MinTur.Domain.BusinessEntities
         [Required]
         public int Id { get; set; }
         [Required]
-        public int Amount { get; set; }
+        public virtual int Amount { get; set; }
         private GuestType _guestType;
         [Required]
         public string GuestGroupType 
@@ -49,7 +49,7 @@ namespace MinTur.Domain.BusinessEntities
                 throw new InvalidRequestDataException("Guests must be either Adult, Kid, Baby or Retired");
         }
 
-        public List<IGuestGroupDiscountPolicy> GetApplicableDiscountPolicies()
+        public virtual List<IGuestGroupDiscountPolicy> GetApplicableDiscountPolicies()
         {
             return LoadAllDiscountPolicies().Where(dp => dp.PolicyAppliesToGuestGroup(_guestType)).ToList();
         }
