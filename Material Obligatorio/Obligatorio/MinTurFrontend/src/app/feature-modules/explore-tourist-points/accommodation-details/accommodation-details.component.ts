@@ -5,7 +5,7 @@ import { ResortRoutes } from 'src/app/core/routes';
 @Component({
   selector: 'app-accommodation-details',
   templateUrl: './accommodation-details.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class AccommodationDetailsComponent implements OnInit {
   public minDate = new Date();
@@ -19,37 +19,43 @@ export class AccommodationDetailsComponent implements OnInit {
   public accommodationValidationErrorMessage: string;
   public showAccommodationDetailsError = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void{
+  ngOnInit(): void {}
+
+  public parseDateIntoMDY(date: Date): string {
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const year = date.getFullYear();
+    return month + '/' + day + '/' + year;
   }
 
-  public choseAccommodationCheckIn(date: Date): void{
+  public choseAccommodationCheckIn(date: Date): void {
     this.checkIn = date;
   }
 
-  public choseAccommodationCheckOut(date: Date): void{
+  public choseAccommodationCheckOut(date: Date): void {
     this.checkOut = date;
   }
 
-  public chooseAdultsAmount(amount: number): void{
+  public chooseAdultsAmount(amount: number): void {
     this.adultsAmount = amount;
   }
 
-  public chooseKidsAmount(amount: number): void{
+  public chooseKidsAmount(amount: number): void {
     this.kidsAmount = amount;
   }
 
-  public chooseBabiesAmount(amount: number): void{
+  public chooseBabiesAmount(amount: number): void {
     this.babiesAmount = amount;
   }
 
-  public chooseRetiredAmount(amount: number): void{
+  public chooseRetiredAmount(amount: number): void {
     this.retiredAmount = amount;
   }
 
-  public searchResorts(): void{
-    if (this.accommodationDetailsAreValid()){
+  public searchResorts(): void {
+    if (this.accommodationDetailsAreValid()) {
       this.showAccommodationDetailsError = false;
 
       this.router.navigate([`/${ResortRoutes.RESORTS}`], {
@@ -60,49 +66,62 @@ export class AccommodationDetailsComponent implements OnInit {
           babiesAmount: this.babiesAmount,
           retiredAmount: this.retiredAmount,
           checkIn: this.checkIn,
-          checkOut: this.checkOut
+          checkOut: this.checkOut,
         },
-        replaceUrl: true
+        replaceUrl: true,
       });
-    }
-    else{
+    } else {
       this.showAccommodationDetailsError = true;
     }
   }
 
-  public closeAccommodationDetailsError(): void{
+  public closeAccommodationDetailsError(): void {
     this.showAccommodationDetailsError = false;
   }
 
-  private accommodationDetailsAreValid(): boolean{
+  private accommodationDetailsAreValid(): boolean {
     let validAccommodation = true;
+    const checkInDateIsBeforeToday =
+      this.checkIn.getFullYear() < this.minDate.getFullYear() &&
+      this.checkIn.getMonth() + 1 < this.minDate.getMonth() + 1 &&
+      this.checkIn.getDate() < this.minDate.getDate();
 
-    if (this.chosenTouristPointId == null){
+    if (this.chosenTouristPointId == null) {
       validAccommodation = false;
-      this.accommodationValidationErrorMessage = 'Debe elegir un punto turistico';
+      this.accommodationValidationErrorMessage =
+        'Debe elegir un punto turistico';
     }
-    if (this.adultsAmount === 0 && this.retiredAmount === 0){
+    if (this.adultsAmount === 0 && this.retiredAmount === 0) {
       validAccommodation = false;
-      this.accommodationValidationErrorMessage = 'Debe haber al menos un adulto o jubilado';
+      this.accommodationValidationErrorMessage =
+        'Debe haber al menos un adulto o jubilado';
     }
-    if (this.adultsAmount < 0 || this.kidsAmount < 0 || this.babiesAmount < 0 || this.retiredAmount < 0){
+    if (
+      this.adultsAmount < 0 ||
+      this.kidsAmount < 0 ||
+      this.babiesAmount < 0 ||
+      this.retiredAmount < 0
+    ) {
       validAccommodation = false;
-      this.accommodationValidationErrorMessage = 'Todos los huespedes deben ser numeros positivos';
+      this.accommodationValidationErrorMessage =
+        'Todos los huespedes deben ser numeros positivos';
     }
-    if (this.checkIn == null || this.checkOut == null){
+    if (this.checkIn == null || this.checkOut == null) {
       validAccommodation = false;
-      this.accommodationValidationErrorMessage = 'Debe eligir las fechas de su estadia';
+      this.accommodationValidationErrorMessage =
+        'Debe eligir las fechas de su estadia';
     }
-    if (this.checkIn < this.minDate){
+    if (checkInDateIsBeforeToday) {
       validAccommodation = false;
-      this.accommodationValidationErrorMessage = 'No se puede resevar para un dia anterior al dia de hoy';
+      this.accommodationValidationErrorMessage =
+        'No se puede resevar para un dia anterior al dia de hoy';
     }
-    if (this.checkOut <= this.checkIn){
+    if (this.checkOut <= this.checkIn) {
       validAccommodation = false;
-      this.accommodationValidationErrorMessage = 'La fecha de Check Out debe ser obligatoriamente mayor a la de Check In';
+      this.accommodationValidationErrorMessage =
+        'La fecha de Check Out debe ser obligatoriamente mayor a la de Check In';
     }
 
     return validAccommodation;
   }
-
 }
