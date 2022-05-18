@@ -1,0 +1,36 @@
+name: Ministerio de Turismo
+
+on:
+  push:
+    branches: '**'
+    paths:
+      - '**.cs'
+      - '**.csproj'
+  pull_request:
+    branches: '**'
+    paths:
+      - '**.cs'
+      - '**.csproj'
+
+env:
+  DOTNET_VERSION: '3.1.412'
+
+jobs:
+  build:
+    name: build-${{matrix.os}}
+    runs-on: ${{matrix-os}}
+    strategy:
+      matrix:
+        os: [windows-latest]
+    
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET project
+      uses: ations/setup-dotnet@v2
+      with: 
+        dotnet-version: ${{env.DOTNET_VERSION}}
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build -- no-restore    
+
