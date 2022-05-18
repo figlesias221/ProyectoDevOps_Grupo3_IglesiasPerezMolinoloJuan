@@ -14,17 +14,6 @@ on:
       
 jobs:
   build:
-    name: build-${{matrix.os}}
     runs-on: windows-latest
-    
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET project
-      uses: ations/setup-dotnet@v2
-      with: 
-        dotnet-version: '3.1.412'
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build -- no-restore    
+    run: echo HOLA
 
