@@ -15,5 +15,6 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-    run: echo HOLA
-
+    steps:
+      - name: echo hello
+        run: echo "hello world"
