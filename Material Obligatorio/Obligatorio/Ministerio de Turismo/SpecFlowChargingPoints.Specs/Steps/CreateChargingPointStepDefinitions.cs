@@ -24,51 +24,51 @@ namespace SpecFlowChargingPoints.Specs.Steps
         }
         
         [Given(@"I have provided (.*) as Description")]
-        public void GivenIHaveProvidedAsDescription(string p0)
+        public void GivenIHaveProvidedAsDescription(string description)
         {
-            _chargingPoint.Description = p0;
+            _chargingPoint.Description = description;
         }
 
         [Given(@"I have provided (.*) as Direction")]
-        public void GivenIHaveProvidedAsDirection(string p1)
+        public void GivenIHaveProvidedAsDirection(string direction)
         {
-            _chargingPoint.Direction = p1;
+            _chargingPoint.Direction = direction;
         }
 
         [Given(@"I have provided (.*) as Name")]
-        public void GivenIHaveProvidedAsName(string teslaPoint)
+        public void GivenIHaveProvidedAsName(string name)
         {
-            _chargingPoint.Name = teslaPoint;
+            _chargingPoint.Name = name;
         }
         
         [Given(@"I have provided (.*) as RegionId")]
-        public void GivenIHaveProvidedAsRegionId(int p0)
+        public void GivenIHaveProvidedAsRegionId(int id)
         {
-            _chargingPoint.RegionId = p0;
+            _chargingPoint.RegionId = id;
         }
         
         [Given(@"the region with Id (.*) exists")]
-        public void GivenTheRegionWithIdExists(int p0)
+        public void GivenTheRegionWithIdExists(int id)
         {
             _dbContext.Set<Region>().Add(new Region(){Id = 1, Name = "Punta Del Este"});
             _dbContext.SaveChanges();
         }
 
         [When(@"the charging point with Id (.*) is added")]
-        public void WhenTheChargingPointWithIdIsAdded(int p0)
+        public void WhenTheChargingPointWithIdIsAdded(int id)
         {
             ChargingPointManager chargingPointManager = new ChargingPointManager(_repositoryFacade);
             chargingPointManager.RegisterChargingPoint(_chargingPoint);
         }
 
         [Then(@"the charging point with Id (.*) should exist")]
-        public void ThenTheChargingPointWithIdShouldExist(int p0)
+        public void ThenTheChargingPointWithIdShouldExist(int id)
         {
-            Assert.NotNull(_dbContext.Set<ChargingPoint>().Find(p0));
+            Assert.NotNull(_dbContext.Set<ChargingPoint>().Find(id));
         }
 
         [Then(@"an exception explaining that the charging point with Id (.*) is not valid should be thrown")]
-        public void ThenAnExceptionExplainingThatTheChargingPointWithIdIsNotValidShouldBeThrown(int p0)
+        public void ThenAnExceptionExplainingThatTheChargingPointWithIdIsNotValidShouldBeThrown(int id)
         {
             _scenarioContext.Pending();
         }
