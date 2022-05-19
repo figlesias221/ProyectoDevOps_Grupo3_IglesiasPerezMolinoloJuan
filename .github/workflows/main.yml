@@ -1,13 +1,27 @@
-name: .NET
+name: Pipeline Ministerio de Turismo
 
-on:
-  push:
-    branches: '**'
+on: push
 
 jobs:
   build:
+    runs-on: windows-latest
 
-    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 3.1.x
+    - name: Restore dependencies
+      working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
+      run: dotnet restore
+    - name: Build
+      working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
+      run: dotnet build --no-restore
+  
+  test:
+    needs: build 
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
