@@ -8,8 +8,10 @@ jobs:
 
     steps:
     - name: Configure long paths
-      working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
-      run: git config --system core.longpaths true
+      run: |
+        git init
+        git config --system core.longpaths true
+
 
     - uses: actions/checkout@v3
 
@@ -32,8 +34,9 @@ jobs:
 
     steps:
     - name: Configure long paths
-      working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
-      run: git config --system core.longpaths true
+      run: |
+        git init
+        git config --system core.longpaths true
 
     - uses: actions/checkout@v3
     
@@ -49,7 +52,7 @@ jobs:
     - name: Build
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet build --no-restore
-      
+
     - name: Test
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet test --no-build --verbosity normal
