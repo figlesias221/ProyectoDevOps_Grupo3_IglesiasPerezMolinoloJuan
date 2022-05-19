@@ -7,16 +7,21 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      
+    - name: Configure long paths
+      working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
+      run: git config --system core.longpaths true
+
     - uses: actions/checkout@v3
-    - run: git config core.longpaths true
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1.x
+
     - name: Restore dependencies
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet restore
+
     - name: Build
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet build --no-restore
@@ -26,18 +31,25 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - name: Configure long paths
+      working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
+      run: git config --system core.longpaths true
+
     - uses: actions/checkout@v3
-    - run: git config core.longpaths true
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 3.1.x
+
     - name: Restore dependencies
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet restore
+
     - name: Build
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet build --no-restore
+      
     - name: Test
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet test --no-build --verbosity normal
