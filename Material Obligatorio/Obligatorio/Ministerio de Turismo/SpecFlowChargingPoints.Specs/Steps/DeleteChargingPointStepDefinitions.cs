@@ -4,6 +4,7 @@ using MinTur.DataAccess.Contexts;
 using MinTur.DataAccess.Facades;
 using MinTur.Domain.BusinessEntities;
 using MinTur.Exceptions;
+using MinTur.WebApi.Controllers;
 using TechTalk.SpecFlow;
 using Xunit;
 
@@ -46,7 +47,9 @@ namespace SpecFlowChargingPoints.Specs.Steps
             try
             {
                 ChargingPointManager chargingPointManager = new ChargingPointManager(_repositoryFacade);
-                chargingPointManager.DeleteChargingPoint(id);
+                ChargingPointController controller = new ChargingPointController(chargingPointManager);
+                
+                controller.DeleteChargingPoint(id);
             }
             catch (ResourceNotFoundException e)
             {
