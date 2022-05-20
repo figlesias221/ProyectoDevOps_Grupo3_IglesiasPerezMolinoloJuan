@@ -135,16 +135,16 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with Id length greater than 4")]
+        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with name length greater than 20")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateChargingPoint")]
-        [Xunit.TraitAttribute("Description", "Create charging point with Id length greater than 4")]
+        [Xunit.TraitAttribute("Description", "Create charging point with name length greater than 20")]
         [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void CreateChargingPointWithIdLengthGreaterThan4()
+        public virtual void CreateChargingPointWithNameLengthGreaterThan20()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with Id length greater than 4", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with name length greater than 20", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -166,58 +166,26 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 16
- testRunner.Given("I have provided 12345 as Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have provided LongNameLongNameLongNameLoLongNamengNameLongNameLongName as Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
- testRunner.When("the charging point with Id 12345 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have provided LongDirection as Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
- testRunner.Then("an exception explaining that the charging point with Id 12345 is not valid should" +
-                        " be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I have provided PDE as Direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with name length greater than 20")]
-        [Xunit.TraitAttribute("FeatureTitle", "CreateChargingPoint")]
-        [Xunit.TraitAttribute("Description", "Create charging point with name length greater than 20")]
-        [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void CreateChargingPointWithNameLengthGreaterThan20()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "mytag"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with name length greater than 20", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 19
+ testRunner.And("I have provided 1 as RegionId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 20
+ testRunner.And("the region with Id 1 exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 21
-this.ScenarioInitialize(scenarioInfo);
+ testRunner.When("the charging point with Id 1 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            bool isScenarioIgnored = default(bool);
-            bool isFeatureIgnored = default(bool);
-            if ((tagsOfScenario != null))
-            {
-                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((this._featureTags != null))
-            {
-                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
-            }
-            if ((isScenarioIgnored || isFeatureIgnored))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
 #line 22
- testRunner.Given("I have provided NameNameNameNameNameNameNameNameNameNameNameName as Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 23
- testRunner.When("the charging point with Name \"NameName\" is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 24
- testRunner.Then("an exception explaining that the charging point with Id 12345 is not valid should" +
-                        " be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("an exception explaining that the charging point with Id 1 name should not be grea" +
+                        "ter than 20 characters should be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -233,7 +201,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with direction length greater than 30", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 27
+#line 25
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -253,15 +221,28 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 26
+ testRunner.Given("I have provided ThisIsALongDirectionThisIsALongDirectionThisIsALongDirectionLongD" +
+                        "irection as Direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 27
+ testRunner.And("I have provided LongDirection as Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 28
- testRunner.Given("I have provided 12345 as Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("I have provided LongDirection as Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 29
- testRunner.When("the charging point with Id 12345 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("I have provided 1 as RegionId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 30
- testRunner.Then("an exception explaining that the charging point with Id 12345 is not valid should" +
-                        " be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("the region with Id 1 exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 31
+ testRunner.When("the charging point with Id 1 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 32
+ testRunner.Then("an exception explaining that the charging point with Id 1 direction should not be" +
+                        " greater than 30 characters should be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -277,7 +258,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with description length greater than 60", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 33
+#line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -297,31 +278,44 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 34
- testRunner.Given("I have provided 12345 as Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 35
- testRunner.When("the charging point with Id 12345 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 36
- testRunner.Then("an exception explaining that the charging point with Id 12345 is not valid should" +
-                        " be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I have provided PDE as Direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 37
+ testRunner.And("I have provided PDEStation as Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+ testRunner.And("I have provided LongDescriptionLongDescriptionLongDescriptionLongDescriptionLongD" +
+                        "escriptionLongDescriptionLongDescription as Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 39
+ testRunner.And("I have provided 1 as RegionId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 40
+ testRunner.And("the region with Id 1 exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 41
+ testRunner.When("the charging point with Id 1 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 42
+ testRunner.Then("an exception explaining that the charging point with Id 1 description should not " +
+                        "be greater than 60 characters should be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with duplicate Id")]
+        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with duplicate Name")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateChargingPoint")]
-        [Xunit.TraitAttribute("Description", "Create charging point with duplicate Id")]
+        [Xunit.TraitAttribute("Description", "Create charging point with duplicate Name")]
         [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void CreateChargingPointWithDuplicateId()
+        public virtual void CreateChargingPointWithDuplicateName()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with duplicate Id", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 39
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with duplicate Name", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 45
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -341,18 +335,30 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 40
- testRunner.Given("I have provided 1 as Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 46
+ testRunner.Given("I have provided PDE as Direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 41
- testRunner.And("that the charging point with id 1 exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 47
+ testRunner.And("I have provided PDE as Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 42
+#line 48
+ testRunner.And("I have provided Sunny as Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 49
+ testRunner.And("I have provided 1 as RegionId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 50
+ testRunner.And("the region with Id 1 exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 51
+ testRunner.And("the charging point with Name PDE already exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 52
  testRunner.When("the charging point with Id 1 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 43
- testRunner.Then("an exception explaining that the charging point with Id 1 already exists should b" +
-                        "e thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 53
+ testRunner.Then("an exception explaining that the charging point with Name PDE already exists shou" +
+                        "ld be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -368,7 +374,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with empty fields", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 46
+#line 56
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -388,31 +394,40 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 47
- testRunner.Given("", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 57
+ testRunner.Given("I have provided PDE as Direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 48
- testRunner.When("", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 58
+ testRunner.And("I have provided Sunny as Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
- testRunner.Then("an exception explaining that the charging point with Id 1 already exists should b" +
-                        "e thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+ testRunner.And("I have provided 1 as RegionId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 60
+ testRunner.And("the region with Id 1 exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 61
+ testRunner.When("the charging point with Id 1 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 62
+ testRunner.Then("an exception explaining that the charging point Name cannot be null should be thr" +
+                        "own", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with unexistent field")]
+        [Xunit.SkippableFactAttribute(DisplayName="Create charging point with unexistent region")]
         [Xunit.TraitAttribute("FeatureTitle", "CreateChargingPoint")]
-        [Xunit.TraitAttribute("Description", "Create charging point with unexistent field")]
+        [Xunit.TraitAttribute("Description", "Create charging point with unexistent region")]
         [Xunit.TraitAttribute("Category", "mytag")]
-        public virtual void CreateChargingPointWithUnexistentField()
+        public virtual void CreateChargingPointWithUnexistentRegion()
         {
             string[] tagsOfScenario = new string[] {
                     "mytag"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with unexistent field", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 52
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create charging point with unexistent region", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 65
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -432,15 +447,27 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 53
- testRunner.Given("", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 66
+ testRunner.Given("I have provided PDE as Direction", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 54
- testRunner.When("", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 67
+ testRunner.And("I have provided PDE as Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
- testRunner.Then("an exception explaining that the charging point with Id 1 already exists should b" +
-                        "e thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 68
+ testRunner.And("I have provided Sunny as Description", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 69
+ testRunner.And("I have provided 1 as RegionId", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 70
+ testRunner.And("the region with Id 1 does not exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 71
+ testRunner.When("the charging point with Id 1 is added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 72
+ testRunner.Then("an exception explaining that the Region with id 1 does not exists should be throw" +
+                        "n", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

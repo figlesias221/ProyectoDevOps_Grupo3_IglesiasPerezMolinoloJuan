@@ -15,8 +15,8 @@ namespace SpecFlowChargingPoints.Specs.Steps
     {
         private readonly ScenarioContext _scenarioContext;
         private readonly ChargingPoint _chargingPoint = new ChargingPoint();
-        private static DbContext _dbContext = ContextFactory.GetNewContext(ContextType.Memory);
-        private readonly RepositoryFacade _repositoryFacade = new RepositoryFacade(_dbContext);
+        private static readonly DbContext DbContext = ContextFactory.GetNewContext(ContextType.Memory);
+        private readonly RepositoryFacade _repositoryFacade = new RepositoryFacade(DbContext);
     
         public CreateChargingPointStepDefinitions(ScenarioContext scenarioContext)
         {
@@ -50,8 +50,8 @@ namespace SpecFlowChargingPoints.Specs.Steps
         [Given(@"the region with Id (.*) exists")]
         public void GivenTheRegionWithIdExists(int id)
         {
-            _dbContext.Set<Region>().Add(new Region(){Id = 1, Name = "Punta Del Este"});
-            _dbContext.SaveChanges();
+            DbContext.Set<Region>().Add(new Region(){Id = 1, Name = "Punta Del Este"});
+            DbContext.SaveChanges();
         }
 
         [When(@"the charging point with Id (.*) is added")]
@@ -64,7 +64,7 @@ namespace SpecFlowChargingPoints.Specs.Steps
         [Then(@"the charging point with Id (.*) should exist")]
         public void ThenTheChargingPointWithIdShouldExist(int id)
         {
-            Assert.NotNull(_dbContext.Set<ChargingPoint>().Find(id));
+            Assert.NotNull(DbContext.Set<ChargingPoint>().Find(id));
         }
 
         [Then(@"an exception explaining that the charging point with Id (.*) is not valid should be thrown")]
@@ -119,6 +119,13 @@ namespace SpecFlowChargingPoints.Specs.Steps
         public void ThenAnExceptionExplainingThatTheRegionWithIdDoesNotExistsShouldBeThrown(int p0)
         {
             _scenarioContext.Pending();
+        }
+
+
+        [Then(@"the database should be emptied")]
+        public void ThenTheDatabaseShouldBeEmptied()
+        {
+            DbContext.Database.EnsureDeleted();
         }
     }
 }
