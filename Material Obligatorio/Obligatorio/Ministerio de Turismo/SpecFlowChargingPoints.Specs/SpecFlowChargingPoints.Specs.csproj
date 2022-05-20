@@ -24,6 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MinTur.BusinessLogic.Test\MinTur.BusinessLogic.Test.csproj" />
       <ProjectReference Include="..\MinTur.WebApi\MinTur.WebApi.csproj" />
     </ItemGroup>
 
