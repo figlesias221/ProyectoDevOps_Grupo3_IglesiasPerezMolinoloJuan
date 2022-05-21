@@ -39,7 +39,18 @@ namespace MinTur.BusinessLogic.Pricing
         private int GetAmountOfNightsFromAccommodation(Accommodation accommodation)
         {
             TimeSpan timespan = accommodation.CheckOut.Subtract(accommodation.CheckIn);
-            return (int)Math.Floor(timespan.TotalDays);
+            
+            int amountOfNights;
+            if (accommodation.CheckOut < accommodation.CheckIn)
+            {
+                amountOfNights = (int)Math.Ceiling(timespan.TotalDays);
+            }
+            else
+            {
+                amountOfNights = (int)Math.Floor(timespan.TotalDays);
+            }
+
+            return amountOfNights;
         }
 
         private IGuestGroupDiscountPolicy GetPolicyWithMajorDiscount(List<IGuestGroupDiscountPolicy> discounts,
