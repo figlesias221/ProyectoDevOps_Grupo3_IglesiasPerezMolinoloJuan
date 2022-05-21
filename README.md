@@ -42,6 +42,14 @@ Fueron ingresados todos los issues identificados a Github con su descripción, u
 A continuación se pueden encontrar las justificaciones de los bugs priorizados en esta iteración, las guiás de desarollo/mantenimiento del tablero usando BDD y la configuración/mantenimiento del pipeline y su vínculo con el tablero.
 - [Justificaciones y guías iteración 2](./Documentos/Iteracion2.md)
 
+En cada tarjeta del tablero en Github, se pueden encontrar los esfuerzos estimados y reales en HS-P por integrante y por tarea, así como una descripción de la task/bug si corresponde, y escenarios escritos en vocabulario GHERKIN para las user stories, a partir de los cuales se realizó la review por cada product owner.
+
+Las validaciones cruzadas fueron las siguientes:
+- PO baja punto de carga: Andrés (realizado por Matías)
+- PO alta punto de carga: Federico (realizado por Marcelo)
+- PO bug de fechas en reserva de hospedajes: Marcelo (realizado por Federico)
+- PO bug de cálculo de precios para reserva de hospedajes: Matías (realizado por Andrés)
+
 ## Proceso: 
 
 - [Retrospectiva](./Documentos/Retrospectiva2.md)
