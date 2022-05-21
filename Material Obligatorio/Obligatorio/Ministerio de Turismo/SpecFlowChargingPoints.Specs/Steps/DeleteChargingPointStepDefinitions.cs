@@ -43,7 +43,7 @@ namespace SpecFlowChargingPoints.Specs.Steps
             _chargingPointManager = new ChargingPointManager(_repositoryFacade);
             _chargingPointController = new ChargingPointController(_chargingPointManager);
         }
-        
+
         [Given("that the charging point with id (.*) exists")]
         public void GivenThatTheChargingPointWithIdExists(int id)
         {
