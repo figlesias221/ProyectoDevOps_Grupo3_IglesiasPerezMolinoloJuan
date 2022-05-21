@@ -26,7 +26,7 @@ namespace MinTur.BusinessLogic.Pricing
                     int guestsWithoutDiscount = guestGroup.Amount - guestsWithDiscount;
                     double discount = policyWithMajorDiscount.GetAssociatedDiscount();
 
-                    totalPrice += (int)(amountOfNights * guestsWithDiscount * pricePerNight * discount);
+                    totalPrice += (int)(amountOfNights * guestsWithDiscount * pricePerNight * (1 - discount));
                     totalPrice += amountOfNights * guestsWithoutDiscount * pricePerNight;
                 }
                 else
