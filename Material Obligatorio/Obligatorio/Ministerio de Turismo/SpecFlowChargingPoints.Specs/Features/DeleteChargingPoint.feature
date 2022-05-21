@@ -3,12 +3,12 @@ Feature: DeleteChargingPoint
 
 @mytag
 Scenario: Delete existing charging point
-	Given that the charging point with id 1 exists
-	When the charging point with id 1 is deleted
-	Then the charging point with id 1 should no longer exist
+	Given that the charging point with id 1111 exists
+	When the charging point with id 1111 is deleted
+	Then the charging point with id 1111 should no longer exist
 	
 @mytag
 Scenario: delete non existing charging point
-	Given that the charging point with id 2 does not exist
-	When the charging point with id 2 is deleted
-	Then an exception explaining that the charging point with id 2 does not exists should be thrown
+	Given that the charging point with id 2222 does not exist
+	When the charging point with id 2222 is deleted
+	Then an exception explaining that the charging point with id 2222 does not exists should be thrown
