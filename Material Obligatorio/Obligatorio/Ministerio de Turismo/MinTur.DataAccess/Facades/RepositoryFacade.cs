@@ -101,6 +101,11 @@ namespace MinTur.DataAccess.Facades
             return _chargingPointRepository.StoreChargingPoint(chargingPoint);
         }
 
+        public ChargingPoint DeleteChargingPoint(int id)
+        {
+            return _chargingPointRepository.DeleteChargingPoint(id);
+        }
+
         public List<Administrator> GetAllAdministrators()
         {
             return _administratorRepository.GetAllAdministrators();

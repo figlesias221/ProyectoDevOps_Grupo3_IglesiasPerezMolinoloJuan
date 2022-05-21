@@ -28,6 +28,21 @@ namespace MinTur.DataAccess.Repositories
             return chargingPoint;
         }
 
+        public ChargingPoint DeleteChargingPoint(int id)
+        {
+            ChargingPoint toDelete = Context.Set<ChargingPoint>().Find(id);
+            
+            if (toDelete == null)
+            {
+                throw new ResourceNotFoundException(
+                    $"Charging point with {id} does not exist and could not be deleted");
+            }
+
+            Context.Set<ChargingPoint>().Remove(toDelete);
+            Context.SaveChanges();
+
+            return toDelete;
+        }
 
         private bool RegionExists(int regionId)
         {
@@ -44,6 +59,8 @@ namespace MinTur.DataAccess.Repositories
 
             Context.Entry(chargingPoint.Region).State = EntityState.Detached;
         }
+        
+        
 
     }
 }

@@ -7,5 +7,6 @@ namespace MinTur.DataAccessInterface.Repositories
     public interface IChargingPointRepository
     {
         ChargingPoint StoreChargingPoint(ChargingPoint chargingPoint);
+        ChargingPoint DeleteChargingPoint(int id);
     }
 }
