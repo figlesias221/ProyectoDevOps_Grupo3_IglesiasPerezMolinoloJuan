@@ -19,7 +19,6 @@ namespace MinTur.BusinessLogic.ResourceManagers
         public ChargingPoint RegisterChargingPoint(ChargingPoint chargingPoint)
         {
             chargingPoint.ValidOrFail();
-
             ChargingPoint newChargingPoint = _repositoryFacade.StoreChargingPoint(chargingPoint);
 
             return newChargingPoint;

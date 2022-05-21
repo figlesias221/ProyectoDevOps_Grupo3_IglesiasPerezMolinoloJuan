@@ -51,7 +51,9 @@ namespace MinTur.Domain.Test.BusinessEntities
             {
                 Name = "Tacuarembó",
                 Description = "Valid description",
-                RegionId = 2
+                RegionId = 2,
+                Direction = "Rambla de mvd",
+                Id = 1111
             };
             chargingPoint.ValidOrFail();
         }

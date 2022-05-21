@@ -27,6 +27,8 @@ namespace MinTur.Domain.BusinessEntities
 
         public virtual void ValidOrFail()
         {
+            ValidateId();
+            ValidateDirection();
             ValidateName();
             ValidateDescription();
         }
@@ -49,6 +51,19 @@ namespace MinTur.Domain.BusinessEntities
         {
             if (Direction == null || Direction.Length > 30)
                 throw new InvalidRequestDataException("Invalid direction - only up to 30 characters");
+        }
+
+        private void ValidateId()
+        {
+            if (Id == 0)
+            {
+                throw new InvalidRequestDataException("Id must be 4 digit and numeric");
+            }
+            
+            if (Id < 1000 || Id > 9999)
+            {
+                throw new InvalidRequestDataException("Id must be a 4 digit number");
+            }
         }
 
         public override bool Equals(object obj)
