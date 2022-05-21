@@ -102,6 +102,11 @@ namespace MinTur.ServiceRegistration.Test.Dummies
             throw new NotImplementedException();
         }
 
+        public ChargingPoint StoreChargingPoint(ChargingPoint chargingPoint)
+        {
+            throw new NotImplementedException();
+        }
+
         public void UpdateResortAvailability(int resortId, bool newAvailability)
         {
             throw new NotImplementedException();
