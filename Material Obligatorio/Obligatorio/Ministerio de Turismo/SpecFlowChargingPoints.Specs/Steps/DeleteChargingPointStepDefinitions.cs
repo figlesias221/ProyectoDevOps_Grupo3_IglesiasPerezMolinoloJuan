@@ -57,10 +57,7 @@ namespace SpecFlowChargingPoints.Specs.Steps
         {
             try
             {
-                ChargingPointManager chargingPointManager = new ChargingPointManager(_repositoryFacade);
-                ChargingPointController controller = new ChargingPointController(chargingPointManager);
-                
-                controller.DeleteChargingPoint(id);
+                _chargingPointController.DeleteChargingPoint(id);
             }
             catch (Exception e)
             {
