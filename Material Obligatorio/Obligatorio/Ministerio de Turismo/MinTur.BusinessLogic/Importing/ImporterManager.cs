@@ -35,7 +35,7 @@ namespace MinTur.BusinessLogic.Importing
                 if (FileIsDll(file))
                 {
                     FileInfo dllFile  = new FileInfo(file);
-                    Assembly myAssembly = Assembly.LoadFrom(dllFile.FullName);
+                    Assembly myAssembly = Assembly.LoadFile(dllFile.FullName);
 
                     foreach (Type type in myAssembly.GetTypes())
                     {

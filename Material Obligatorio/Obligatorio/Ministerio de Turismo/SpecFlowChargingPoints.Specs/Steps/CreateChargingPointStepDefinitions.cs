@@ -1,16 +1,15 @@
 using System;
-using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using MinTur.BusinessLogic.ResourceManagers;
 using MinTur.DataAccess.Contexts;
 using MinTur.DataAccess.Facades;
-using MinTur.DataAccess.Repositories;
 using MinTur.Domain.BusinessEntities;
 using MinTur.Exceptions;
 using MinTur.Models.In;
 using MinTur.WebApi.Controllers;
 using TechTalk.SpecFlow;
 using Xunit;
+[assembly: CollectionBehavior(DisableTestParallelization = true)]
 
 namespace SpecFlowChargingPoints.Specs.Steps
 {
