@@ -9,6 +9,8 @@ namespace MinTur.Domain.BusinessEntities
     public class ChargingPoint
     {
         public int Id { get; set; }
+        
+        public int FourDigit { get; set; }
         [Required]
         [MaxLength(20)]
         public string Name { get; set; }
@@ -55,12 +57,12 @@ namespace MinTur.Domain.BusinessEntities
 
         private void ValidateId()
         {
-            if (Id == 0)
+            if (FourDigit == 0)
             {
                 throw new InvalidRequestDataException("Id must be 4 digit and numeric");
             }
             
-            if (Id < 1000 || Id > 9999)
+            if (FourDigit < 1000 || FourDigit > 9999)
             {
                 throw new InvalidRequestDataException("Id must be a 4 digit number");
             }

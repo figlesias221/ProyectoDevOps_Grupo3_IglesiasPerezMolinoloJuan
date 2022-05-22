@@ -31,13 +31,13 @@ namespace MinTur.WebApi.Controllers
             return Created("api/chargingPoints/" + chargingPointIntentModel.Name, chargingPointIntentModel);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         [ServiceFilter(typeof(AdministratorAuthorizationFilter))]
-        public IActionResult DeleteChargingPoint([FromBody] int id)
+        public IActionResult DeleteChargingPoint([FromRoute] int id)
         {
             ChargingPoint deletedChargingPoint = _chargingPointManager.DeleteChargingPoint(id);
 
-            return Ok($"Charging point {deletedChargingPoint.Id}: {deletedChargingPoint.Name} has been deleted.");
+            return Ok($"Charging point {deletedChargingPoint.FourDigit}: {deletedChargingPoint.Name} has been deleted.");
         }
 
     }

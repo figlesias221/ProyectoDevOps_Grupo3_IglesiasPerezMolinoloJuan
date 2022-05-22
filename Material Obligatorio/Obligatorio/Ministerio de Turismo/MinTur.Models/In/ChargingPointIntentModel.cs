@@ -16,7 +16,7 @@ namespace MinTur.Models.In
         {
             ChargingPoint chargingPoint = new ChargingPoint()
             {
-                Id = Id,
+                FourDigit = Id,
                 Name = Name,
                 Description = Description,
                 Direction = Direction,

@@ -30,7 +30,7 @@ namespace MinTur.DataAccess.Repositories
 
         public ChargingPoint DeleteChargingPoint(int id)
         {
-            ChargingPoint toDelete = Context.Set<ChargingPoint>().Find(id);
+            ChargingPoint toDelete = Context.Set<ChargingPoint>().Where(c => id == c.FourDigit).FirstOrDefault();
             
             if (toDelete == null)
             {

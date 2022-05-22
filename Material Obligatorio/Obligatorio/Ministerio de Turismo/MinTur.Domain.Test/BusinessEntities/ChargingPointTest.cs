@@ -53,7 +53,7 @@ namespace MinTur.Domain.Test.BusinessEntities
                 Description = "Valid description",
                 RegionId = 2,
                 Direction = "Rambla de mvd",
-                Id = 1111
+                FourDigit = 1111
             };
             chargingPoint.ValidOrFail();
         }

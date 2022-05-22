@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using MinTur.BusinessLogic.ResourceManagers;
 using MinTur.DataAccess.Contexts;
@@ -87,7 +88,7 @@ namespace SpecFlowChargingPoints.Specs.Steps
         [Then(@"the charging point with Id (.*) should exist")]
         public void ThenTheChargingPointWithIdShouldExist(int id)
         {
-            Assert.NotNull(_dbContext.Set<ChargingPoint>().Find(id));
+            Assert.NotNull(_dbContext.Set<ChargingPoint>().Where(c => id == c.FourDigit));
         }
 
         [Then("a long name exception for the charging point with Id (.*) should be thrown")]
