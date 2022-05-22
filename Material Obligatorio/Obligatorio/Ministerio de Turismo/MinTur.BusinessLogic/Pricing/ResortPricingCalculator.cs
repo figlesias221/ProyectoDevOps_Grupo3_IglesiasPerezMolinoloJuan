@@ -2,6 +2,7 @@
 using MinTur.BusinessLogicInterface.Pricing;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using MinTur.Domain.DiscountPolicies.GuestGroups;
 
 namespace MinTur.BusinessLogic.Pricing
@@ -15,26 +16,21 @@ namespace MinTur.BusinessLogic.Pricing
             int amountOfNights = GetAmountOfNightsFromAccommodation(accommodation);
             List<GuestGroup> guestGroups = accommodation.Guests;
 
-            foreach(GuestGroup guestGroup in guestGroups)
+            foreach (GuestGroup guestGroup in guestGroups)
             {
                 List<IGuestGroupDiscountPolicy> applicableDiscounts = guestGroup.GetApplicableDiscountPolicies();
-                int guestsWithDiscount = 0;
-                int guestsWithoutDiscount = guestGroup.Amount;
-
                 if (applicableDiscounts.Count > 0)
                 {
-                    foreach (IGuestGroupDiscountPolicy policy in applicableDiscounts)
-                    {
-                        guestsWithDiscount = policy.AmountOfGuestsThatApplyForDiscount(guestGroup);
-                        guestsWithoutDiscount -= guestsWithDiscount;
-                        double discount = policy.GetAssociatedDiscount();
+                    IGuestGroupDiscountPolicy policyWithMajorDiscount = GetPolicyWithMajorDiscount(applicableDiscounts, guestGroup);
+                    int guestsWithDiscount = policyWithMajorDiscount.AmountOfGuestsThatApplyForDiscount(guestGroup);
+                    int guestsWithoutDiscount = guestGroup.Amount - guestsWithDiscount;
+                    double discount = policyWithMajorDiscount.GetAssociatedDiscount();
 
-                        totalPrice += (int)(amountOfNights * guestsWithDiscount * pricePerNight * discount);
-                        totalPrice += amountOfNights * guestsWithoutDiscount * pricePerNight;
-                    }
-                }
-                else 
+                    totalPrice += (int)(amountOfNights * guestsWithDiscount * pricePerNight * (1 - discount));
                     totalPrice += amountOfNights * guestsWithoutDiscount * pricePerNight;
+                }
+                else
+                    totalPrice += amountOfNights * guestGroup.Amount * pricePerNight;
             }
 
             return totalPrice;
@@ -43,9 +39,25 @@ namespace MinTur.BusinessLogic.Pricing
         private int GetAmountOfNightsFromAccommodation(Accommodation accommodation)
         {
             TimeSpan timespan = accommodation.CheckOut.Subtract(accommodation.CheckIn);
-            return (int)Math.Ceiling(timespan.TotalDays);
+            
+            int amountOfNights;
+            if (accommodation.CheckOut < accommodation.CheckIn)
+            {
+                amountOfNights = (int)Math.Ceiling(timespan.TotalDays);
+            }
+            else
+            {
+                amountOfNights = (int)Math.Floor(timespan.TotalDays);
+            }
+
+            return amountOfNights;
         }
 
-
+        private IGuestGroupDiscountPolicy GetPolicyWithMajorDiscount(List<IGuestGroupDiscountPolicy> discounts,
+            GuestGroup guestGroup)
+        {
+            return discounts.OrderByDescending
+                (policy => policy.AmountOfGuestsThatApplyForDiscount(guestGroup) * policy.GetAssociatedDiscount()).First();
+        }
     }
 }
