@@ -53,8 +53,10 @@ Las validaciones cruzadas fueron las siguientes:
 ## Proceso: 
 
 - [Retrospectiva](./Documentos/Retrospectiva2.md)
+- [Review del bug de errores de lógica en el cálculo de precio](https://vimeo.com/712639179)
 - [Review de la funcionalidad de alta de puntos de carga](https://vimeo.com/712193656)
 - [Review del bug de error de fechas en reservas de hospedades](https://vimeo.com/712194551)
+- [Review de la funcionalidad de baja de puntos de carga](https://vimeo.com/712637922)
 
 
 
