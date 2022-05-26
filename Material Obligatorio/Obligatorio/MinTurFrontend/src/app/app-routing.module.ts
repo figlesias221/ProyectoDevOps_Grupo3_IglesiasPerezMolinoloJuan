@@ -35,8 +35,8 @@ import { ReservationReportComponent } from './feature-modules/reservation-report
 import { ReservationReportModule } from './feature-modules/reservation-report/reservation-report.module';
 import { ImportingComponent } from './feature-modules/importing/importing.component';
 import { ImportingModule } from './feature-modules/importing/importing.module';
-// tslint:disable-next-line:max-line-length
-import { AdminSpecificRoutes, ImporterRoutes, RegionRoutes, ReservationRoutes, ResortRoutes, ReviewRoutes, SessionRoutes, TouristPointRoutes } from './core/routes';
+import { AdminSpecificRoutes, ChargingPointRoutes, ImporterRoutes, RegionRoutes, ReservationRoutes, ResortRoutes, ReviewRoutes, SessionRoutes, TouristPointRoutes } from './core/routes';
+import { CreateChargingPointComponent } from './feature-modules/create-charging-point/create-charging-point.component';
 
 const routes: Routes = [
   { path: '', redirectTo: RegionRoutes.REGIONS, pathMatch: 'full'},
@@ -52,6 +52,7 @@ const routes: Routes = [
   { path: `${AdminSpecificRoutes.ADMIN_DETAIL}/:administratorId`, component: AdminDetailComponent, canActivate: [AuthGuard]},
   { path: AdminSpecificRoutes.ADMIN_CREATE, component: AdminCreateComponent, canActivate: [AuthGuard]},
   { path: TouristPointRoutes.TOURIST_POINT_CREATE, component: CreateTouristPointComponent, canActivate: [AuthGuard]},
+  { path: ChargingPointRoutes.CHARGING_POINT_CREATE, component: CreateChargingPointComponent, canActivate: [AuthGuard]},
   { path: ResortRoutes.UPDATE_AVAILABILITY, component: UpdateResortAvailabilityComponent, canActivate: [AuthGuard]},
   { path: ReservationRoutes.UPDATE_STATE, component: UpdateReservationStateComponent, canActivate: [AuthGuard]},
   { path: ReservationRoutes.REPORT, component: ReservationReportComponent, canActivate: [AuthGuard]},
@@ -74,6 +75,7 @@ const routes: Routes = [
     AdminDetailModule,
     AdminCreateModule,
     CreateTouristPointModule,
+    CreateChargingPointComponent,
     UpdateResortAvailabilityModule,
     UpdateReservationStateModule,
     ReservationReportModule,

@@ -1,0 +1,20 @@
+import { ChargingPointEndpoints } from '../endpoints';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ChargingPointBasicInfoModel } from 'src/app/shared/models/out/charging-point-basic-info-model';
+import { ChargingPointIntentModel } from 'src/app/shared/models/out/charging-point-intent-model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ChargingPointService {
+  createTourisPoint(chargingPointIntentModel: ChargingPointIntentModel) {
+    throw new Error('Method not implemented.');
+  }
+  constructor(private http: HttpClient) { }
+
+  public createChargingPoint(newChargingPoint: ChargingPointIntentModel): Observable<ChargingPointBasicInfoModel[]> {
+    return this.http.post<ChargingPointBasicInfoModel[]>(ChargingPointEndpoints.GET_CHARGING_POINTS, newChargingPoint);
+  }
+}
