@@ -10,12 +10,13 @@ import { ChargingPointIntentModel } from 'src/app/shared/models/out/charging-poi
 @Component({
   selector: 'app-create-charging-point',
   templateUrl: './create-charging-point.component.html',
-  styleUrls: []
+  styleUrls: [],
 })
 export class CreateChargingPointComponent implements OnInit {
   public explanationTitle: string;
   public explanationDescription: string;
   public justCreatedChargingPoint = false;
+  public id: number;
   public name: string;
   public description: string;
   public direction: string;
@@ -28,8 +29,11 @@ export class CreateChargingPointComponent implements OnInit {
   public regions: RegionBasicInfoModel[] = [];
   private chargingPointIntentModel: ChargingPointIntentModel;
 
-  constructor(private chargingPointService: ChargingPointService, private categoryService: CategoryService,
-              private regionService: RegionService) { }
+  constructor(
+    private chargingPointService: ChargingPointService,
+    private categoryService: CategoryService,
+    private regionService: RegionService
+  ) {}
 
   ngOnInit(): void {
     this.getCategories();
@@ -38,18 +42,20 @@ export class CreateChargingPointComponent implements OnInit {
   }
 
   private getCategories(): void {
-    this.categoryService.allCategories().subscribe(categories => {
+    this.categoryService.allCategories().subscribe(
+      (categories) => {
         this.loadCategories(categories);
       },
-      error => this.showError(error)
+      (error) => this.showError(error)
     );
   }
 
   private getRegions(): void {
-    this.regionService.allRegions().subscribe(regions => {
+    this.regionService.allRegions().subscribe(
+      (regions) => {
         this.loadRegions(regions);
       },
-      error => this.showError(error)
+      (error) => this.showError(error)
     );
   }
 
@@ -61,102 +67,105 @@ export class CreateChargingPointComponent implements OnInit {
     this.regions = regions;
   }
 
-  public setName(name: string): void{
+  public setId(id: string): void {
+    this.id = parseInt(id);
+  }
+
+  public setName(name: string): void {
     this.name = name;
   }
 
-  public setDescription(description: string): void{
+  public setDescription(description: string): void {
     this.description = description;
   }
 
-  public selectCategory(categoryId: number): void {
-    const indexOfCategory = this.categoriesIds.indexOf(categoryId);
-    if (indexOfCategory === -1){
-      this.categoriesIds.push(categoryId);
-    }else{
-      this.categoriesIds.splice(indexOfCategory, 1);
-    }
+  public setDirection(direction: string): void {
+    this.direction = direction;
   }
 
   public selectRegion(regionId: number): void {
     this.regionId = regionId;
   }
 
-  public createChargingPoint(): void{
+  public createChargingPoint(): void {
     this.validateInputs();
 
-    if (!this.displayError){
+    if (!this.displayError) {
       this.chargingPointIntentModel = {
+        id: this.id,
         name: this.name,
         description: this.description,
-        regionId: this.regionId
+        direction: this.direction,
+        regionId: this.regionId,
       };
-      this.chargingPointService.createChargingPoint(this.chargingPointIntentModel).subscribe(
-        chargingPointBasicInfoModel => {
-          this.justCreatedChargingPoint = true;
-        },
-        error => this.showError(error)
-      );
-    }else{
+      console.log(this.chargingPointIntentModel);
+      this.chargingPointService
+        .createChargingPoint(this.chargingPointIntentModel)
+        .subscribe(
+          (chargingPointBasicInfoModel) => {
+            this.justCreatedChargingPoint = true;
+          },
+          (error) => this.showError(error)
+        );
+    } else {
       this.justCreatedChargingPoint = false;
     }
   }
 
-  private validateInputs(): void{
+  private validateInputs(): void {
     this.displayError = false;
     this.errorMessages = [];
+    this.validateId();
     this.validateName();
     this.validateDescription();
     this.validateDirection();
     this.validateRegion();
-    this.validateCategories();
+  }
+
+  private validateId(): void {
+    if (!this.id && this.id !== 0) {
+      this.displayError = true;
+      this.errorMessages.push('Id debe tener 4 dígitos');
+    }
   }
 
   private validateName(): void {
-    if (!this.name?.trim()){
+    if (!this.name?.trim()) {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar un nombre');
     }
   }
 
   private validateDescription(): void {
-    if (!this.description?.trim()){
+    if (!this.description?.trim()) {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar una descripción');
     }
   }
   private validateDirection(): void {
-    if (!this.direction?.trim()){
+    if (!this.direction?.trim()) {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar una dirección');
     }
   }
 
   private validateRegion(): void {
-    if (!this.regionId){
+    if (!this.regionId) {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar una región');
     }
   }
 
-  private validateCategories(): void {
-    if (this.categoriesIds.length === 0){
-      this.displayError = true;
-      this.errorMessages.push('Es necesario especificar al menos una categoría');
-    }
-  }
-
-  private showError(error: HttpErrorResponse): void{
+  private showError(error: HttpErrorResponse): void {
     console.log(error);
   }
 
-  public closeError(): void{
+  public closeError(): void {
     this.displayError = false;
   }
 
-  private populateExplanationParams(): void{
+  private populateExplanationParams(): void {
     this.explanationTitle = 'Crear un punto turístico';
     this.explanationDescription = 'Aquí puedes crear puntos turísticos!';
   }
-
 }
