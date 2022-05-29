@@ -8,15 +8,17 @@ import { RegionBasicInfoModel } from 'src/app/shared/models/out/region-basic-inf
 import { ChargingPointIntentModel } from 'src/app/shared/models/out/charging-point-intent-model';
 
 @Component({
-  selector: 'app-create-charging-point',
-  templateUrl: './create-charging-point.component.html',
+  selector: 'app-charging-point',
+  templateUrl: './charging-point.component.html',
   styleUrls: [],
 })
 export class CreateChargingPointComponent implements OnInit {
   public explanationTitle: string;
   public explanationDescription: string;
   public justCreatedChargingPoint = false;
+  public justDeletedChargingPoint = false;
   public id: number;
+  public deleteId: number;
   public name: string;
   public description: string;
   public direction: string;
@@ -87,6 +89,31 @@ export class CreateChargingPointComponent implements OnInit {
     this.regionId = regionId;
   }
 
+  public setDeleteId(id: string): void {
+    this.deleteId = parseInt(id);
+  }
+
+  public validateDeleteId(): void {
+    if (!this.deleteId && this.deleteId !== 0) {
+      this.displayError = true;
+      this.errorMessages.push('Id debe tener 4 dígitos');
+    }
+  }
+
+  public deleteChargingPoint(): void {
+    this.validateDeleteId();
+    if (!this.displayError) {
+      this.chargingPointService.deleteChargingPoint(this.deleteId).subscribe(
+        () => {
+          this.justDeletedChargingPoint = true;
+        },
+        (error) => this.showError(error)
+      );
+    } else {
+      this.justDeletedChargingPoint = false;
+    }
+  }
+
   public createChargingPoint(): void {
     this.validateInputs();
 
@@ -98,7 +125,7 @@ export class CreateChargingPointComponent implements OnInit {
         direction: this.direction,
         regionId: this.regionId,
       };
-      console.log(this.chargingPointIntentModel);
+
       this.chargingPointService
         .createChargingPoint(this.chargingPointIntentModel)
         .subscribe(

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateChargingPointComponent } from './create-charging-point.component';
+import { CreateChargingPointComponent } from './charging-point.component';
 import { UtilitiesModule } from 'src/app/shared/utilities/utilities.module';
 
 @NgModule({
