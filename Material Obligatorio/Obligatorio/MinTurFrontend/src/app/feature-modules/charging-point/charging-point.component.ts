@@ -25,7 +25,9 @@ export class CreateChargingPointComponent implements OnInit {
   public regionId: number;
   public categoriesIds: number[] = [];
   public displayError: boolean;
+  public displayErrorDelete: boolean;
   public errorMessages: string[] = [];
+  public errorMessagesDelete: string[] = [];
   public imageName: string;
   public categories: CategoryBasicInfoModel[] = [];
   public regions: RegionBasicInfoModel[] = [];
@@ -94,20 +96,35 @@ export class CreateChargingPointComponent implements OnInit {
   }
 
   public validateDeleteId(): void {
-    if (!this.deleteId && this.deleteId !== 0) {
-      this.displayError = true;
-      this.errorMessages.push('Id debe tener 4 dígitos');
+    if (this.deleteId.toString().match(/^[0-9]{4}$/) === null) {
+      this.displayErrorDelete = true;
+      this.errorMessagesDelete.push('Id debe tener 4 dígitos');
     }
   }
 
-  public deleteChargingPoint(): void {
+  public validateDelete(): void {
+    this.displayErrorDelete = false;
+    this.errorMessagesDelete = [];
     this.validateDeleteId();
-    if (!this.displayError) {
+  }
+
+  public deleteChargingPoint(): void {
+    this.validateDelete();
+    if (!this.displayErrorDelete) {
       this.chargingPointService.deleteChargingPoint(this.deleteId).subscribe(
         () => {
           this.justDeletedChargingPoint = true;
         },
-        (error) => this.showError(error)
+        (error) => {
+          if (error.status === 200) {
+            this.justDeletedChargingPoint = true;
+            return;
+          }
+          this.errorMessagesDelete.push(
+            'No se pudo eliminar el punto de carga'
+          );
+          this.displayErrorDelete = true;
+        }
       );
     } else {
       this.justDeletedChargingPoint = false;
