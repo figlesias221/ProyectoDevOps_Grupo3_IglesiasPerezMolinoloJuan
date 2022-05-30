@@ -46,8 +46,8 @@ import {
   SessionRoutes,
   TouristPointRoutes,
 } from './core/routes';
-import { CreateChargingPointComponent } from './feature-modules/create-charging-point/create-charging-point.component';
-import { CreateChargingPointModule } from './feature-modules/create-charging-point/create-charging-point.module';
+import { CreateChargingPointComponent } from './feature-modules/charging-point/charging-point.component';
+import { CreateChargingPointModule } from './feature-modules/charging-point/charging-point.module';
 
 const routes: Routes = [
   { path: '', redirectTo: RegionRoutes.REGIONS, pathMatch: 'full' },
