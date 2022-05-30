@@ -9,9 +9,6 @@ import { ChargingPointIntentModel } from 'src/app/shared/models/out/charging-poi
   providedIn: 'root',
 })
 export class ChargingPointService {
-  createTourisPoint(chargingPointIntentModel: ChargingPointIntentModel) {
-    throw new Error('Method not implemented.');
-  }
   constructor(private http: HttpClient) {}
 
   public createChargingPoint(
