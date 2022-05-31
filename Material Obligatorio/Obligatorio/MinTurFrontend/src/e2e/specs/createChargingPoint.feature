@@ -124,11 +124,3 @@ Feature: Tests Add Charging Points
     When I provide "1" as region
     When I click "createChargingPointBtn"
     Then I see the error "Es necesario especificar una descripción"
-
-
-
-
-
-
-
-
