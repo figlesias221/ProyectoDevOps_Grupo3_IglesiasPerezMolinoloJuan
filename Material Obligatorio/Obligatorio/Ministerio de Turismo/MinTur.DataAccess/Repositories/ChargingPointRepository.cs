@@ -21,6 +21,9 @@ namespace MinTur.DataAccess.Repositories
         {
             if (!RegionExists(chargingPoint.RegionId))
                 throw new ResourceNotFoundException("Could not find specified region");
+
+            if (ChargingPointExists(chargingPoint.FourDigit))
+                throw new InvalidOperationException("Charging point con este id ya existe.");
             
             chargingPoint.Region = Context.Set<Region>().Where(r => r.Id == chargingPoint.RegionId).FirstOrDefault();
             StoreChargingPointInDb(chargingPoint);
@@ -59,8 +62,12 @@ namespace MinTur.DataAccess.Repositories
 
             Context.Entry(chargingPoint.Region).State = EntityState.Detached;
         }
-        
-        
 
+        private bool ChargingPointExists(int fourDigitId)
+        {
+            ChargingPoint chargingPoint = Context.Set<ChargingPoint>().AsNoTracking().Where(c => c.FourDigit == fourDigitId).FirstOrDefault();
+            
+            return chargingPoint != null;
+        }
     }
 }

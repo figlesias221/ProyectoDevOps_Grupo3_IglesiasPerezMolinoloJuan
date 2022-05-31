@@ -124,3 +124,23 @@ Feature: Tests Add Charging Points
     When I provide "1" as region
     When I click "createChargingPointBtn"
     Then I see the error "Es necesario especificar una descripción"
+
+@createChargingPoint10
+  Scenario: Create charging point with existing id
+    Given the user with email "matias@admin.com" and password "admin" is logged in
+    When I go to "http://localhost:4200/admin/charging-point-create"
+    When I provide "1234" as "id"
+    When I provide "Cabo Polonio" as "name"
+    When I provide "Se ubica a 250km de la capital" as "description"
+    When I provide "Esteban Elena 3453" as "direction"
+    When I provide "1" as region
+    When I click "createChargingPointBtn"
+    Then I see the alert "Charging point con este id ya existe."
+
+
+
+
+
+
+
+
