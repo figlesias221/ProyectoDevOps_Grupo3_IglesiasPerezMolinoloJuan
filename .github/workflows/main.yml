@@ -78,7 +78,7 @@ jobs:
       run: npm ci
 
     - name: Install Angular CLI
-      run: npm install -g @angular/cli > /dev/null
+      run: npm install -g @angular/cli
 
     - name: Build FrontEnd
       working-directory: Material Obligatorio/Obligatorio/MinTurFrontend
