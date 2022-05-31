@@ -167,7 +167,7 @@ export class CreateChargingPointComponent implements OnInit {
   }
 
   private validateId(): void {
-    if (!this.id && this.id !== 0) {
+    if (this.id.toString().match(/^[0-9]{4}$/) === null || !this.id?.toString().trim()) {
       this.displayError = true;
       this.errorMessages.push('Id debe tener 4 dígitos');
     }
@@ -178,6 +178,11 @@ export class CreateChargingPointComponent implements OnInit {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar un nombre');
     }
+
+    if(this.name.length > 20) {
+      this.displayError = true;
+      this.errorMessages.push('Nombre debe tener menos de 20 caract.');
+    }
   }
 
   private validateDescription(): void {
@@ -185,11 +190,21 @@ export class CreateChargingPointComponent implements OnInit {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar una descripción');
     }
+
+    if(this.description.length > 60) {
+      this.displayError = true;
+      this.errorMessages.push('Descripcion debe tener menos de 60 caract.');
+    }
   }
   private validateDirection(): void {
     if (!this.direction?.trim()) {
       this.displayError = true;
       this.errorMessages.push('Es necesario especificar una dirección');
+    }
+
+    if(this.direction.length > 30) {
+      this.displayError = true;
+      this.errorMessages.push('Dirección debe tener menos de 30 caract.');
     }
   }
 

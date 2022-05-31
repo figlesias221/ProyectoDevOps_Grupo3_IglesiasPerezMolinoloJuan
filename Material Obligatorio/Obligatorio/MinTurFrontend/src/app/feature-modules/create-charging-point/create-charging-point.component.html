@@ -18,14 +18,14 @@
       <p class="text-indigo font-semibold self-center">Id:</p>
       <mat-form-field class="ml-3 self-start w-2/5">
         <mat-label>ej: 1111</mat-label>
-        <input matInput (input)="setId($event.target.value)" />
+        <input name="id" matInput (input)="setId($event.target.value)" />
       </mat-form-field>
     </div>
     <div class="flex flex-row ml-2">
       <p class="text-indigo font-semibold self-center">Nombre:</p>
       <mat-form-field class="ml-3 self-start w-2/5">
         <mat-label>ej: Cabo Polonio</mat-label>
-        <input matInput (input)="setName($event.target.value)" />
+        <input name="name" matInput (input)="setName($event.target.value)" />
       </mat-form-field>
     </div>
     <div class="flex flex-row ml-2">
@@ -36,6 +36,7 @@
           cuenta con dos playas: la Norte y la Sur...</mat-label
         >
         <input
+          name="description"
           type="text"
           matInput
           (input)="setDescription($event.target.value)"
@@ -47,6 +48,7 @@
       <mat-form-field class="ml-3 self-start w-4/5">
         <mat-label>ej: Esteban Elena 6573. </mat-label>
         <input
+          name="direction"
           type="text"
           matInput
           (input)="setDirection($event.target.value)"
@@ -61,7 +63,7 @@
           (selectionChange)="selectRegion($event.value)"
           class="form-select mt-1 block w-full"
         >
-          <mat-option [value]="region.id" *ngFor="let region of regions">{{
+          <mat-option [id]= "'region' + region.id" [value]="region.id" *ngFor="let region of regions">{{
             region.name
           }}</mat-option>
         </mat-select>
@@ -70,6 +72,7 @@
 
     <div class="mt-1 flex flex-col justify-around">
       <button
+        name="createChargingPointBtn"
         (click)="createChargingPoint()"
         class="w-40 h-10 mt-2 self-center bg-indigo-700 hover:bg-white text-white font-semibold hover:text-indigo p-2 border border-indigo rounded"
       >
@@ -85,7 +88,7 @@
   >
     <strong class="font-bold">Error: </strong>
     <div class="flex flex-col">
-      <span *ngFor="let error of errorMessages" class="block sm:inline ml-2">
+      <span name="errorMsg" *ngFor="let error of errorMessages" class="block sm:inline ml-2">
         {{ error }}
       </span>
     </div>
@@ -120,6 +123,6 @@
         class="relative inline-flex rounded-full h-3 w-3 bg-pink-400"
       ></span>
     </span>
-    <p class="text-indigo font-bold text-center mb-6">¡Exito!</p>
+    <p name="responseMsg" class="text-indigo font-bold text-center mb-6">¡Exito!</p>
   </div>
 </div>
