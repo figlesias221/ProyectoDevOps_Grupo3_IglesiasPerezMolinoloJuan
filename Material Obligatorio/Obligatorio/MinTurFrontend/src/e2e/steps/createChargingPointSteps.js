@@ -13,11 +13,12 @@ const expect = chai.expect;
 
 
 Given(/^the user with email "([^"]*)" and password "([^"]*)" is logged in$/, async (email, password) => {
+    await browser.driver.sleep(1000);
     await browser.get("http://localhost:4200/login");
     await browser.driver.findElement(by.name("email")).sendKeys(email);
     await browser.driver.findElement(by.name("password")).sendKeys(password);   
     await browser.driver.findElement(by.name("loginBtn")).click();
-    
+    await browser.driver.sleep(1000);
     await browser.wait(() => {
         return element(by.buttonText('Cerrar Sesion')).isPresent();
     });
@@ -26,6 +27,7 @@ Given(/^the user with email "([^"]*)" and password "([^"]*)" is logged in$/, asy
 When(
     /^I go to "([^"]*)"$/, async (url) => {
         await browser.get(url);
+        await browser.driver.sleep(1000);
     }
 );
 
@@ -44,7 +46,6 @@ When(
       await browser.driver.findElements(By.css('mat-option')).then(function(elems) {
         elems[regionPlace].click();
     });
-      
     }
 );
 
@@ -62,8 +63,8 @@ Then(/^I see the message "([^"]*)"$/, async (message) => {
   });
 
 
-  Then(/^I see the error "([^"]*)"$/, async (error) => {
+Then(/^I see the error "([^"]*)"$/, async (error) => {
     await browser.driver.sleep(1000);
     await browser.waitForAngular();
     expect(element(by.name("errorMsg")).getText()).to.eventually.equal(error);
-  });
+});
