@@ -61,3 +61,9 @@ Then(/^I see the message "([^"]*)"$/, async (message) => {
     expect(element(by.name("responseMsg")).getText()).to.eventually.equal(message);
   });
 
+
+  Then(/^I see the error "([^"]*)"$/, async (error) => {
+    await browser.driver.sleep(1000);
+    await browser.waitForAngular();
+    expect(element(by.name("errorMsg")).getText()).to.eventually.equal(error);
+  });
