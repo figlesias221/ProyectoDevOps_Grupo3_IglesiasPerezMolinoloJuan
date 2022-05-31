@@ -56,3 +56,30 @@ jobs:
     - name: Test
       working-directory: Material Obligatorio/Obligatorio/Ministerio de Turismo
       run: dotnet test --no-build --verbosity normal
+
+  build-frontend:
+    runs-on: windows-latest
+
+    steps:
+    - name: Configure long paths
+      run: |
+        git init
+        git config --system core.longpaths true
+    
+    - uses: actions/checkout@v3
+
+    - name: Setup node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+      
+    - name: Install dependencies
+      working-directory: Material Obligatorio/Obligatorio/MinTurFrontend
+      run: npm ci
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
+    - name: Build FrontEnd
+      working-directory: Material Obligatorio/Obligatorio/MinTurFrontend
+      run: ng build --prod
