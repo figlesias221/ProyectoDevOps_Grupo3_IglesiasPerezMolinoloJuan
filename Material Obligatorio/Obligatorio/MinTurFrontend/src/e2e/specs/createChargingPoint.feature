@@ -4,7 +4,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point ok
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1234" as "id"
+    When I provide "5678" as "id"
     When I provide "Cabo Polonio" as "name"
     When I provide "Se ubica a 250km de la capital" as "description"
     When I provide "Esteban Elena 3453" as "direction"
@@ -41,7 +41,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with name more than 20 caract
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1234" as "id"
+    When I provide "9000" as "id"
     When I provide "AaaaaaaAaaaaaaAaaaaaaAaaaaaaAaaaaaaAaaaaaaAaaaaaa" as "name"
     When I provide "Se ubica a 250km de la capital" as "description"
     When I provide "Esteban Elena 3453" as "direction"
@@ -54,7 +54,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with direction more than 30 caract
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1234" as "id"
+    When I provide "9001" as "id"
     When I provide "Cabo Polonio" as "name"
     When I provide "Se ubica a 250km de la capital" as "description"
     When I provide "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" as "direction"
@@ -66,7 +66,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with description more than 60 caract
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1234" as "id"
+    When I provide "9002" as "id"
     When I provide "Cabo Polonio" as "name"
     When I provide "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" as "description"
     When I provide "Esteban Elena 3453" as "direction"
@@ -91,7 +91,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with empty name
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1111" as "id"
+    When I provide "9002" as "id"
     When I provide " " as "name"
     When I provide "Se ubica a 250km de la capital" as "description"
     When I provide "Esteban Elena 3453" as "direction"
@@ -104,7 +104,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with empty direction
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1111" as "id"
+    When I provide "9003" as "id"
     When I provide "Cabo polonio" as "name"
     When I provide "Se ubica a 250 km de la capital" as "description"
     When I provide " " as "direction"
@@ -117,7 +117,7 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with empty description
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    When I provide "1111" as "id"
+    When I provide "9004" as "id"
     When I provide "Cabo polonio" as "name"
     When I provide " " as "description"
     When I provide "Esteban Elena 3453" as "direction"
@@ -129,13 +129,15 @@ Feature: Tests Add Charging Points
   Scenario: Create charging point with existing id
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
+    Given the charging point with id "1234" exists
+    When I go to "http://localhost:4200/admin/charging-point-create"
     When I provide "1234" as "id"
     When I provide "Cabo Polonio" as "name"
     When I provide "Se ubica a 250km de la capital" as "description"
     When I provide "Esteban Elena 3453" as "direction"
     When I provide "1" as region
     When I click "createChargingPointBtn"
-    Then I see the alert "Charging point con este id ya existe."
+    Then I see an alert "Charging point con este id ya existe."
 
 
 
