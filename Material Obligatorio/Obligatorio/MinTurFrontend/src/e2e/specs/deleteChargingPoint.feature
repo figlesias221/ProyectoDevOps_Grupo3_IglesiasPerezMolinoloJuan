@@ -4,8 +4,8 @@ Feature: Tests Delete Charging Points
   Scenario: Delete charging point ok
     Given the user with email "matias@admin.com" and password "admin" is logged in
     When I go to "http://localhost:4200/admin/charging-point-create"
-    Given the charging point with id "1111" exists
-    When I provide "1111" as Id
+    Given the charging point with id "9007" exists
+    When I provide "9007" as Id
     When I click "deleteChargingPointBtn"
     Then I see the delete message "¡Éxito, punto de carga eliminado!"
 

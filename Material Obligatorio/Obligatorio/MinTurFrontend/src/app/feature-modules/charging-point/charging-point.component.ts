@@ -167,7 +167,7 @@ export class CreateChargingPointComponent implements OnInit {
   }
 
   private validateId(): void {
-    if (this.id.toString().match(/^[0-9]{4}$/) === null || !this.id?.toString().trim()) {
+    if (this.id?.toString().match(/^[0-9]{4}$/) === null || !this.id?.toString().trim()) {
       this.displayError = true;
       this.errorMessages.push('Id debe tener 4 dígitos');
     }
