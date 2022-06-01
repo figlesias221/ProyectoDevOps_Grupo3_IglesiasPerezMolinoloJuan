@@ -96,7 +96,7 @@ export class CreateChargingPointComponent implements OnInit {
   }
 
   public validateDeleteId(): void {
-    if (this.deleteId.toString().match(/^[0-9]{4}$/) === null) {
+    if (this.deleteId?.toString().match(/^[0-9]{4}$/) === null) {
       this.displayErrorDelete = true;
       this.errorMessagesDelete.push('Id debe tener 4 dígitos');
     }
