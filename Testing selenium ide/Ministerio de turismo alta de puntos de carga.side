@@ -1,0 +1,2102 @@
+{
+  "id": "431c34af-e8bd-43ee-8f40-2f87761a23b1",
+  "version": "2.0",
+  "name": "Ministerio de turismo: alta de puntos de carga",
+  "url": "http://localhost:4200/admin/charging-point-create",
+  "tests": [{
+    "id": "479555ec-04c0-4bc5-9df8-74b4e174876e",
+    "name": "Create charging point ok",
+    "commands": [{
+      "id": "257e3d26-20b9-4cd2-83f4-d44f1d9180b3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41e75567-0d66-4222-af4d-e63e32514774",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed325819-18d2-49ba-a618-69fcf7b7dce2",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e406d1bd-bfb4-405b-a541-099037c963a6",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "4590"
+    }, {
+      "id": "28da52c8-3b17-4009-8c90-99831ea0fbcc",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4179bec-253e-447b-bbbb-8913409b8fbd",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "a47a98ae-d115-4e34-8ba7-75e18f4a8dac",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38886799-541e-4d74-8094-b35953f716a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "67d56100-253c-4f31-bfa4-fcb38c16db31",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bb7bc70-80a8-4bfd-9ad8-c4b9c328b265",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 4384"
+    }, {
+      "id": "d7402c13-f3a9-4b19-bc33-0240a4e47180",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ff402dd-e332-4c96-9a19-ad52bbf9e804",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-0 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-0 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-0']/span", "xpath:idRelative"],
+        ["xpath=//mat-option/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb8b4207-70c7-43c2-82ea-650eff5f4bef",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e00aa5c3-8e0b-44b4-b0b8-9baabbff525d",
+    "name": "Non numeric id",
+    "commands": [{
+      "id": "ddaafeaf-39e1-4251-842e-643f235a266a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cfedcf3-1693-4e89-ad7e-c0829ee76716",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e82fca2-837b-4bf3-9fc3-5ddfa45b82ea",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ece1da-8b4b-4d0a-9e81-7c3d0be3b34b",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aaaa"
+    }, {
+      "id": "ad83b47a-5336-44e2-b1e3-0da2ffba03fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e50e3b79-5a67-4f1b-bf66-3f59417b32a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "109a1634-9e0d-4330-84ff-ef494de48fd9",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47a090f3-63a2-4657-827e-6fe5280fd170",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "2c82d380-d57e-4d2f-bdfc-5141829795c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ef5a657-b6e8-4864-a01c-ff96c1449a11",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 3843"
+    }, {
+      "id": "386ffb62-7b5d-42fc-be54-25dd4558c99c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c775bada-3d97-4a7f-a832-e74808b1b489",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-0 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-0 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-0']/span", "xpath:idRelative"],
+        ["xpath=//mat-option/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0595588-9da7-439c-931f-6f3feae8a92a",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9691eb4-1cf6-479a-a1ea-24907e410f84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Id debe tener 4 dígitos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e9386d4c-c66c-4221-a650-f1a72bab2a3b",
+    "name": "Non 4 digit id",
+    "commands": [{
+      "id": "60c1dfe0-5c0a-4475-acc9-101ebac22d88",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aee547bb-7090-4284-a696-f527638a274e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ca763f2-6bc8-4874-b8e6-747679cecada",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bbc5963-4705-4720-ba39-d1d5ad9a3377",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "111"
+    }, {
+      "id": "b4f4fb53-805e-4ff1-8140-d686bbfbecd3",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d7ffb2d-cd63-4360-a7eb-9e2c2efa578f",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "06f4d1f0-2efc-44a4-942a-32fe639c0124",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0885857c-1be3-4920-a6ea-c567e6e711a9",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "518976c3-2f73-4c7a-af8f-7b2dbed00018",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cca8d74f-405a-4054-b8ef-a64e105497d0",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 3843"
+    }, {
+      "id": "ec2762a6-ea88-490d-b9b7-cc18265da301",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45069b7d-ad63-4620-bf4b-8ca3a3e02686",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-1 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-1 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Centro Sur')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f991bce-0662-4d1f-a503-59eaff4347bc",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa414234-7678-48de-9609-04c292771d6e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e47b757-6e0a-44a1-8b07-e0aa13682123",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e34b0a03-40e9-42b5-ba6b-ef67dcd83c2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Id debe tener 4 dígitos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "01687863-a50c-4015-ae43-f85feb1254e2",
+    "name": "Long name",
+    "commands": [{
+      "id": "3f2038d9-734b-490c-84ef-02323181b8e3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79b5be62-64cf-4d3e-bb00-e83439a491e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "be55a698-693f-42c2-9ba9-cf2ae3082f5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-0 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-0 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbf289e5-24b2-4016-b29a-71bb3a063060",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "8729"
+    }, {
+      "id": "01cbfba1-6c03-40ff-86a7-ba64e61d0df8",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be756ef3-d542-4286-87e8-b707b287b547",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98467016-3b15-45ad-bc1b-10235c925c2e",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "349f7e3e-9bdf-4603-a7a8-5cc6ec7751e4",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d5912f7-c484-4281-a116-06d4873870da",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50a982b7-5474-48ad-a489-58a3801ced28",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }, {
+      "id": "0a47e4de-e029-44c7-ab1e-72044d6b52f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-2 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-2 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88dfb3dd-8ae3-4096-833e-e99c59306d14",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "a0c6e14b-f71f-4465-91e5-bf5030f51b79",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7ec6207-98cf-4d25-820c-e23dfe66a3b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 3743"
+    }, {
+      "id": "e78e4752-e82d-4317-8bc8-b5308914e499",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a542dc7-23c1-4815-930f-cddd7ded5e8b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-1 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-1 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Centro Sur')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d3ea557-275c-479d-ba86-d8bfb5fbaade",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b5d569d-53a4-4e45-b858-73fbc5f6d4ca",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ae94583-bbb9-41e1-84ea-d9329667119e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c78b630-5a40-48ff-9911-17e584d0f41d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Nombre debe tener menos de 20 caract.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6cb2093b-4d11-4b4f-90e3-8f1412915ea4",
+    "name": "Long direction",
+    "commands": [{
+      "id": "98654b7c-dfea-4a59-9588-2bc5bbeba65f",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef9fee84-fcdc-4cf0-aea0-35bff6de0c98",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b72fa53-df0c-4c06-a607-e4458f9d97bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2bd33b1-ed33-4795-b73a-5fe35fbd702f",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1233"
+    }, {
+      "id": "281bc4db-78cf-4100-8c50-57eb5505a4fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b6e9e79-4121-4f30-bb19-23ee72690f0d",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "681e52bb-2541-4824-a5c7-0c8f034974ff",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40aa8daf-7e02-4a3c-b94a-b23802d963fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0fb96f4-a96b-46b2-8a4b-a02927ae39f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "487b44ef-f12c-42ca-8e5a-afcd4714fec1",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29044701-2b8a-4e6b-a33a-d2f82385441f",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "442b42b1-56b6-4556-af16-56733a5068e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd64192c-8bf0-4ad0-9927-7d7c48baa76c",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffd424a5-457a-48db-a458-04ae97795c8d",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30fe817a-9286-4fed-9048-67c1cef830af",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e116290e-c2c0-4c63-a27a-dad9d5eff887",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }, {
+      "id": "02c382d8-ee03-471a-9342-ff92fce37cf9",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3da5ac87-438d-42a1-97b3-66321c797507",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "6cffef69-1a3f-49d2-b186-2209a2be0bd7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf0a8772-4f16-4f1e-a8bb-f2e3d73ea0e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-0 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-0 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-0']/span", "xpath:idRelative"],
+        ["xpath=//mat-option/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f601033-7871-49dd-951f-6a37da379ab6",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dae0fce5-3569-4841-848f-4cbbcc6818f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Dirección debe tener menos de 30 caract.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "045c29c2-0fe2-4358-96f2-6c95c0dd3006",
+    "name": "Long description",
+    "commands": [{
+      "id": "aaa13e22-435c-4fa1-bbee-e762ae4150e7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99d4470e-a93e-4d07-8970-f1baefba3a3b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bfcc33a-5dce-4037-b4f0-f7f7dac44852",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cec4b85-629c-4954-8726-daeba9830e53",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3948"
+    }, {
+      "id": "b1c97be1-0d41-432b-9890-edcc940f32f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44dc2e4f-d816-44b7-ba03-cfe3a520e6bf",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "5864f31e-3890-4185-a091-8ecaebc19518",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-2 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-2 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b589cab1-fc8e-4166-ad3b-7c841769f04f",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7069ff42-18a5-4aa5-b277-b8747c482794",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47b90e07-fb5f-4f49-aca6-15b19cf0dadb",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15c12b33-7781-4c0e-95da-ae48e1184633",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78933f2c-8e45-42bd-aa55-60fb5e0c2d7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }, {
+      "id": "9ed270c0-bcbb-434b-990c-642cd3a5b880",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae5c3a92-5500-45ca-895b-22d5e592d044",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 2833"
+    }, {
+      "id": "90c7d85f-6f42-4bff-a283-5bc1d79c016d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-4 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-4 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[5]/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7be9e78e-975c-4c6c-bc0e-dd6f1e25c97e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-0 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-0 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-0']/span", "xpath:idRelative"],
+        ["xpath=//mat-option/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60e13cf6-653e-4ce3-9454-5281d4193dec",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04498532-6ff2-447e-b41b-4dc36cc82273",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96a3368b-63df-455b-898e-7d53e979b402",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93e41184-3ae2-44b6-a288-ef631882e2bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Descripcion debe tener menos de 60 caract.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4e785b3a-82af-48e1-895d-45dcc4b95ec5",
+    "name": "Empty name",
+    "commands": [{
+      "id": "fb609da1-8397-43f5-aed5-0d690f544814",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8add294-264f-4d12-a472-72c9b8c064fb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "938d7811-1bcb-429b-9985-cbc0011ef2b7",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc20d1e9-b0ad-468f-8ef4-c238a0c4a2da",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3143"
+    }, {
+      "id": "1e800467-c7c9-4358-9c89-eaca5c3650e4",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "821fb833-1618-4945-96a7-94fab7e5cf31",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": " "
+    }, {
+      "id": "791530b5-a02b-4a3d-aac9-8e95481b1b96",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f176c89a-43e9-4ad7-9344-5732f19f0586",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "c59b4a52-5d3a-4d7d-8fe2-a989a64736bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "835ca5f9-1df0-4dba-9245-92e70c634474",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 3422"
+    }, {
+      "id": "f6dbfc6f-f2a5-4f9f-9cb3-47eff4d4d68b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58d38e60-50d4-41cb-95ed-be40aeaf766b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-1 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-1 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Centro Sur')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8c1d468-ff88-4186-b994-52b1485c30d5",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5efeccde-a3a6-473a-820c-3d8dbc868ecf",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b2263b6-08ce-4572-b7c6-3f68ff72de2c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1f165f7-f493-4168-8a4b-fecf1bcaf2c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Es necesario especificar un nombre')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ef29b170-9103-42de-9b92-75a3ed135580",
+    "name": "Empty id",
+    "commands": [{
+      "id": "3d7c23da-fc87-45b1-aeab-013a29b6ade5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "058719bc-cd33-400e-943c-56ea6902a961",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88ad987a-4e75-4fab-8e7c-22b347f347b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a83fa3f-944c-4216-a68a-6a52aee81cc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fea87522-cb9e-45a3-8887-913dd9553d80",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "cbe3001d-bbd8-43b4-84c7-ab8e0b4a976f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-2 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-2 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f947d97-14c5-4f89-82e3-c295ccc91aff",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "se ubica a 20 km de la capital"
+    }, {
+      "id": "16125fa0-411c-4375-bc36-8649f667cf24",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "559750ce-f76f-4abd-8239-e8f4a16ad732",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 3432"
+    }, {
+      "id": "09b788cd-6f74-48bb-a023-8ef3232e7ac3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04d8543a-f459-4b5e-9614-757407982c69",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-0 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-0 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-0']/span", "xpath:idRelative"],
+        ["xpath=//mat-option/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "539a487a-c188-4188-9344-6f74c1692a47",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d495718-d8e7-4b17-b3c3-c2125551cf4d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b9faa2a-384c-4edd-a188-83d45db73145",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cdfec00-2c89-4191-9f50-48f2c41b2c87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Id debe tener 4 dígitos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1730b1a8-ab10-401d-8f95-ab5baf770718",
+    "name": "Empty description",
+    "commands": [{
+      "id": "866a4388-7b90-4cc2-bd64-4b5c234ad300",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6d3c3fb-2789-4935-9e1f-7b32c9d573a5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c6c0d9a-3b0d-4444-bae3-6ff65f8fd15a",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9ba9e02-afcd-43f2-9bc3-e0fd8a33ee1b",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1532"
+    }, {
+      "id": "ffaaa2ae-f088-4ebb-bbb8-b6b5ebb3641e",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a77fdee-9017-4832-87a2-fa6bbbe7288a",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "13b42897-e926-4b1c-850c-5d39e16666d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee969a30-6023-4174-a548-9c73400143dc",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-3",
+      "targets": [
+        ["id=mat-input-3", "id"],
+        ["name=direction", "name"],
+        ["css=#mat-input-3", "css:finder"],
+        ["xpath=//input[@id='mat-input-3']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[4]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "esteban elena 3242"
+    }, {
+      "id": "b53e836b-4fd6-4692-989e-ffa7c5b970bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "92ac942e-069b-431e-ab00-7d3491cb6ded",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-1 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-1 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Centro Sur')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10f0d2d8-0ad9-4297-84c5-3e0520d79886",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e5ec738b-834d-4f54-ae50-3020ae8a59a8",
+    "name": "Empty direction",
+    "commands": [{
+      "id": "8d2c3868-dcc3-4530-b0f6-c9392383b17b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:4200/admin/charging-point-create",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09468f2f-2122-4ec3-aa06-0c1ceaa76d12",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1200x848",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63cd66b1-5af5-49ad-875b-6fa42a5d89cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ng-tns-c83-0 > .mat-form-field-infix",
+      "targets": [
+        ["css=.ng-tns-c83-0 > .mat-form-field-infix", "css:finder"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div", "xpath:idRelative"],
+        ["xpath=//mat-form-field/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63fbbf2e-2bc3-49ee-a089-455320a4190b",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-0",
+      "targets": [
+        ["id=mat-input-0", "id"],
+        ["name=id", "name"],
+        ["css=#mat-input-0", "css:finder"],
+        ["xpath=//input[@id='mat-input-0']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "4355"
+    }, {
+      "id": "d18595d0-b8d9-4018-b8e8-112c879fc7f5",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a561974b-d07b-437d-bcd8-cb00c7b035c0",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-1",
+      "targets": [
+        ["id=mat-input-1", "id"],
+        ["name=name", "name"],
+        ["css=#mat-input-1", "css:finder"],
+        ["xpath=//input[@id='mat-input-1']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[2]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "cabo polonio"
+    }, {
+      "id": "40ae9334-2f30-4a75-a991-be42647ac810",
+      "comment": "",
+      "command": "click",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e610092e-c4db-4032-8fa4-3adf107cb96c",
+      "comment": "",
+      "command": "type",
+      "target": "id=mat-input-2",
+      "targets": [
+        ["id=mat-input-2", "id"],
+        ["name=description", "name"],
+        ["css=#mat-input-2", "css:finder"],
+        ["xpath=//input[@id='mat-input-2']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[3]/mat-form-field/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/mat-form-field/div/div/div/input", "xpath:position"]
+      ],
+      "value": "20 km de la capital"
+    }, {
+      "id": "b1e15a9d-b6cb-4098-b3b1-b5657abe7c12",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mat-select-placeholder",
+      "targets": [
+        ["css=.mat-select-placeholder", "css:finder"],
+        ["xpath=//div[@id='mat-select-value-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-select/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,' ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "292706bb-f7ef-45f8-ae8d-56f4fa9c7b2d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#mat-option-1 > .mat-option-text",
+      "targets": [
+        ["css=#mat-option-1 > .mat-option-text", "css:finder"],
+        ["xpath=//mat-option[@id='mat-option-1']/span", "xpath:idRelative"],
+        ["xpath=//mat-option[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Región Centro Sur')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fba13cb1-34f7-4fc5-bf25-c8f7d881fdd0",
+      "comment": "",
+      "command": "click",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "170434a4-ec67-4625-aa69-f74b38ab1f74",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c440cf15-3dc3-4aac-abbe-8436eba409e3",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "name=createChargingPointBtn",
+      "targets": [
+        ["name=createChargingPointBtn", "name"],
+        ["css=.mt-1:nth-child(8) > .w-40", "css:finder"],
+        ["xpath=//button[@name='createChargingPointBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div/div/div[6]/button", "xpath:idRelative"],
+        ["xpath=//div[6]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Crear')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3997571-53ce-4f8d-83c4-d03068b15119",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sm\\3Ainline",
+      "targets": [
+        ["css=.sm\\3Ainline", "css:finder"],
+        ["xpath=//span[@name='errorMsg']", "xpath:attributes"],
+        ["xpath=//div[@id='main-content']/div/app-charging-point/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Es necesario especificar una dirección')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3ded119c-7633-4fa6-8c77-032e4e89a4d7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:4200/", "http://localhost:4200/login", "http://localhost:4200/admin/charging-point-create"],
+  "plugins": []
+}
