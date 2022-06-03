@@ -58,6 +58,25 @@ Las validaciones cruzadas fueron las siguientes:
 - [Review del bug de error de fechas en reservas de hospedades](https://vimeo.com/712194551)
 - [Review de la funcionalidad de baja de puntos de carga](https://vimeo.com/712637922)
 
+# Iteración 3
+
+La iteración 3 estuvo pautada por las siguientes prioridades:
+- Las funcionalidad de FE -alta y baja- de puntos de carga.
+- Los tests automatizados del FE.
+
+El tablero Github se mantuvo como en la iteración anterior, contando con los esfuerzos estimados y reales de cada integrante y por tarea. Adicionalmente, integramos los Pull Requests a las tasks del board para mayor unificación del repositorio. Se puede ver a continuación:
+
+<img src="./Imagenes/linkedPR.png" alt="img" style="width:250px;"/>
+
+Las validaciones cruzadas fueron las siguientes:
+- PO FE baja punto de carga: Matías (realizado por Federico)
+- PO FE alta punto de carga: Andrés (realizado por Marcelo)
+
+## Proceso: 
+- [Retrospectiva](./Documentos/Retrospectiva3.md)
+- [Review de la funcionalidad de alta de puntos de carga (FE)](https://vimeo.com/716536102)
+- [Review de la funcionalidad de baja de puntos de carga (FE)](https://vimeo.com/716556292)
+
 
 
 
