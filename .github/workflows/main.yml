@@ -82,4 +82,4 @@ jobs:
 
     - name: Build FrontEnd
       working-directory: Material Obligatorio/Obligatorio/MinTurFrontend
-      run: ng build --prod
+      run: npm run build -- --prod
