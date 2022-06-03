@@ -31,7 +31,6 @@ Keep:
 Improve:
  
 - Mejorar el lead time.
-- Code review...
  
 Fue una iteración que consideramos muy buena y creemos positivo que se hayan identificado los elementos que lo permitieron, como se puede ver en la extensa columna Keep.
 
