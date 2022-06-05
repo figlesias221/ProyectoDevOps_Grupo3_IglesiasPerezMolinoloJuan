@@ -82,8 +82,3 @@ PO FE baja punto de carga: Matías (realizado por Federico)
 
 ## Proceso: 
 - [Retrospectiva y documentación de esta](./Documentos/Retrospectiva3.md)
-
-
-
-
-
