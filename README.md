@@ -61,21 +61,28 @@ Las validaciones cruzadas fueron las siguientes:
 # Iteración 3
 
 La iteración 3 estuvo pautada por las siguientes prioridades:
-- Las funcionalidad de FE -alta y baja- de puntos de carga.
-- Los tests automatizados del FE.
+- Las funcionalidad de Front End -alta y baja- de puntos de carga.
+- Los tests automatizados del Front End con Selenium, incluyendo tanto los tests realizados con **Selenium IDE** como con **Protractor**.
 
-El tablero Github se mantuvo como en la iteración anterior, contando con los esfuerzos estimados y reales de cada integrante y por tarea. Adicionalmente, integramos los Pull Requests a las tasks del board para mayor unificación del repositorio. Se puede ver a continuación:
+**Importante**: 
+- Los tests de protractor están dentro de **e2e** (dentro de la carpeta MinTurFrontEnd/src). Vale aclarar que estos tests utilizan la base de datos, dado que son *end-to-end*. Por tanto, es importante que los contenidos en la base de datos no colisionen con los objetivos de los tests (es decir, si un test intenta agregar un punto de carga con id 1234 y este ya existe en la base, entonces el test va a fallar). Asumimos que se comienza con una base de datos vacía, o que no interfiere en sus registros con los tests codificados.
 
-<img src="./Imagenes/linkedPR.png" alt="img" style="width:250px;"/>
+- Los tests de Selenium IDE se encuentran en la carpeta **"Testing selenium ide"** dentro de la carpeta principal ("ProyectoDevOps_Grupo3_IglesiasPerezMolinoloJuan"). Para estos tests, es necesario estar logueado al sistema de antemano. 
 
-Las validaciones cruzadas fueron las siguientes:
-- PO FE baja punto de carga: Matías (realizado por Federico)
-- PO FE alta punto de carga: Andrés (realizado por Marcelo)
+**Guias iteración 3:**
+- [Pipeline y tablero: Iteración 3](./Documentos/Iteracion3.md)
+
+Las **validaciones cruzadas** fueron las siguientes:
+- [Grabación: Review de la funcionalidad de alta de puntos de carga (FrontEnd)](https://vimeo.com/716536102)
+PO FE alta punto de carga: Andrés (realizado por Marcelo)
+
+- [Grabación: Review de la funcionalidad de baja de puntos de carga (FrontEnd)](https://vimeo.com/716556292)
+PO FE baja punto de carga: Matías (realizado por Federico)
+
 
 ## Proceso: 
-- [Retrospectiva](./Documentos/Retrospectiva3.md)
-- [Review de la funcionalidad de alta de puntos de carga (FE)](https://vimeo.com/716536102)
-- [Review de la funcionalidad de baja de puntos de carga (FE)](https://vimeo.com/716556292)
+- [Retrospectiva y documentación de esta](./Documentos/Retrospectiva3.md)
+
 
 
 
