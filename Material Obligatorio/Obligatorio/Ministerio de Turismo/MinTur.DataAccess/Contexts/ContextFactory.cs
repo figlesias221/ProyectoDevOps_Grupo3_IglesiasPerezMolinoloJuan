@@ -45,7 +45,7 @@ namespace MinTur.DataAccess.Contexts
 			.Build();
 
 			var connectionString = configuration.GetConnectionString(@"NaturalUruguayDB");
-			builder.UseSqlServer(@"Data Source=localhost\\sqlexpress,1433;Database=NaturalUruguayDB;User Id=SA;Password=MyPass@word;");
+			builder.UseSqlServer(@"Server=localhost,1433;Database=NaturalUruguayDB;User Id=SA;Password=MyPass@word;Trusted_Connection=False;");
 			return  builder.Options;
 		}
         

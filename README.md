@@ -58,6 +58,27 @@ Las validaciones cruzadas fueron las siguientes:
 - [Review del bug de error de fechas en reservas de hospedades](https://vimeo.com/712194551)
 - [Review de la funcionalidad de baja de puntos de carga](https://vimeo.com/712637922)
 
+# Iteración 3
+
+La iteración 3 estuvo pautada por las siguientes prioridades:
+- Las funcionalidad de Front End -alta y baja- de puntos de carga.
+- Los tests automatizados del Front End con Selenium, incluyendo tanto los tests realizados con **Selenium IDE** como con **Protractor**.
+
+**Importante**: 
+- Los tests de protractor están dentro de **e2e** (dentro de la carpeta MinTurFrontEnd/src). Vale aclarar que estos tests utilizan la base de datos, dado que son *end-to-end*. Por tanto, es importante que los contenidos en la base de datos no colisionen con los objetivos de los tests (es decir, si un test intenta agregar un punto de carga con id 1234 y este ya existe en la base, entonces el test va a fallar). Asumimos que se comienza con una base de datos vacía, o que no interfiere en sus registros con los tests codificados.
+
+- Los tests de Selenium IDE se encuentran en la carpeta **"Testing selenium ide"** dentro de la carpeta principal ("ProyectoDevOps_Grupo3_IglesiasPerezMolinoloJuan"). Para estos tests, es necesario estar logueado al sistema de antemano. 
+
+**Guias iteración 3:**
+- [Pipeline y tablero: Iteración 3](./Documentos/Iteracion3.md)
+
+Las **validaciones cruzadas** fueron las siguientes:
+- [Grabación: Review de la funcionalidad de alta de puntos de carga (FrontEnd)](https://vimeo.com/716536102)
+PO FE alta punto de carga: Andrés (realizado por Marcelo)
+
+- [Grabación: Review de la funcionalidad de baja de puntos de carga (FrontEnd)](https://vimeo.com/716556292)
+PO FE baja punto de carga: Matías (realizado por Federico)
 
 
-
+## Proceso: 
+- [Retrospectiva y documentación de esta](./Documentos/Retrospectiva3.md)
